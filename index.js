@@ -83,7 +83,7 @@
         'Made by Matheus Valadares': '制作: Matheus Valadares',
         'Some icons by Lorc Skoll from game-icons.net': '部分图标: Lorc Skoll 来自 game-icons.net',
         'Some icons from twemoji.twitter.com': '部分图标: twemoji.twitter.com',
-        'Some tiles by kenney.nl': '部分材质贴图: kenney.nl',
+        'Some tiles by kenney.nl': '部分纹理贴图: kenney.nl',
 
         'Privacy Policy': '隐私策略',
 
