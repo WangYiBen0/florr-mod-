@@ -2,18 +2,21 @@
 // @name            Florr.io 汉化
 // @namespace       A florr.io userjs
 // @description     全面汉化 Florr.io
-// @version         1.0.0
-// @author          -lexiyvv, flo修仙传, Tinhone
+// @version         1.1.2
+// @author          -lexiyvv, flo修仙传, Tinhone, squid233, Lucker
 // @license         GPL-3.0
-// @match           *://*.florr.io/*
+// @match           *://florr.io/*
 // @grant           GM_setValue
 // @grant           GM_getValue
 // @compatible      firefox V50+
 // @compatible      edge V50+
 // @compatible      chrome V50+
 // @icon            data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAB2lBMVEUAAADTvUbTvUbTvUbTvUbTvUbTvUbTvUbTvUbTvUbTvUbTvUbTvUbTvUbSvEbTvUbSvUbTvUbSvEbTvUbTvUbTvUbTvUbTvUbTvUbTvUbTvUbTvUbSvEbTvUbSvEbUvkfWwEjYwUnVv0fex03p0lXy21r331754V/y2lrp0lTdx03UvkbgyU/y21v95WL/6GP/52P95WHgyU7XwUns1Vfs1VbXwUjZwkrYwkn03mLm0mH85WLm0mL03mHfyU7742HYzZHU0cLhz2z/6GLj0m7W08TUyY3742DVvkfp1WHe28r8/f/Yz5f85GD85F/Rx4/8/P/j4NDu2WX85WHTvUb/6mTNu1erqqX7/P7c1rT332D13l6Ykm/n6Oru7ejl02/o0lTSvEbAr1A0MzBoaGp+eFvz3F/03WBUTzJPT1FvbmvHtlfx2lrOu1UsKyQaGx1eWDL54mFgWTQbHB4qKCLNu1T2313q1V1GQy0bHCCMgUH/6WSjlUhcVjPbx1j75WL03mDo0VT+6WT65GL+5mPdxk21pEaqmkL03V/75GLCsEuQgjj34GDjzliEeDNuYyuGeTSLfjZ2ay5zaC3Pu1D/6GT85mPgy1fDsUy+rErSvlL34WDr1Fb////IkFdGAAAAH3RSTlMAAAEHDAo0api0wQ9buO7+/j35BmjnefVpPua37Zf+dLW/BwAAAAFiS0dEnQa78rEAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfkAQgDJRPX3t0LAAACLUlEQVQ4y4VTB3cSQRC+pYYWDSkkgeQOkuMOCLdrLmAUxULU2Mt59t4LllhIuVQ1lth7y491mV1CAH3Oe/fm7cx3U78RhFWCbHaHw25Dwt8EIafL3eTxej1NbpcToQa3zx9oXiNK0agkrm0O+H21EGRrCQRjff1yXFHiaiIZCwZaVmdCrW3tqYG0hjGhgvE6eTDV3taKqv6OkD6kgZcJ1jLZUEcFgVBnaH2a1Ik8HOpkdSDU1a2ncT0Ay9nuLkAgXzg1xGwcxXUmFfahcgB/cEAD+4aNubLObdoMiFw+6KchkDMcYwm2bN22vUBIYWTHzl3wgzoadlKAK9LHAuzes3fffkIOHDx0+Aj8YSQjLgpwH+2Hp3ns+ImTpwg5febsufMFqOLCRTcF9IgyA1y6fOXqNYyv37h567YJMYtiDxLsHikOcPPO3Xv3xwgZe/Dw0WMGKEkeu+DwRhXW3PjE5JRFiDU1OTHOGlV0r6MKIGR6ZrYMmJ2Z5gYArKQgZG6e6fk5PjBIQYtUK3PGNYoXSdtMNCyCywK06YokDW7QnpSh1tNn7GkswqDoqNkgiPX8xUvLfLX0+k0lA4yaLmtQY5a3795/+Pjp8xcegC0L1p1hpq/fvv/4+eu3xV7LbN1AmCxPQizT5G6iSpwwQLlhub4DdYVyjLTZTA1pjWWpSlpO+7xqANnoZxTzNbTnhzOaTBRLilIqLiyKdYdTOb1eUdJ1SextPL3/H++/z/8P7nmbVKvpGgUAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMTItMzFUMjA6MDg6NTMtMDg6MDCgb7H/AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIwLTAxLTA4VDExOjM3OjE5LTA4OjAwqEgKbQAAAABJRU5ErkJggg==
+// @downloadURL https://update.greasyfork.org/scripts/462298/Florrio%20%E6%B1%89%E5%8C%96.user.js
+// @updateURL https://update.greasyfork.org/scripts/462298/Florrio%20%E6%B1%89%E5%8C%96.meta.js
 // ==/UserScript==
 
+//2024-12-14 Update: 花瓣除魔法系、ygg外全覆盖
 (function () {
     'use strict';
 
@@ -42,28 +45,36 @@
     const reloadProcessBarImg = document.createElement("img");
     reloadProcessBarImg.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAABlJREFUKFNj/Puf4T8DEYBxVCG+UKJ+8AAABz4d2ZbeQwkAAAAASUVORK5CYII=';
 
-    let timestamp = performance.timeOrigin + performance.now();
+    let timestampForDebug = performance.timeOrigin + performance.now();
 
     const translate = {
         //特殊判定
         'vvyixel': 'lexiyvv',
         'floxxz': 'flo修仙传',
+        'WingDinGaster': 'Gaster博士',
 
 
-
+        'Achievements': '成就',
+        'Done': '已完成',
+        'Guild': '工会',
+        'You don\'t have a guild yet': '你现在还没有工会',
+        'Connection lost, reconnecting...': '连接丢失，正在重连……',
 
 
         //用户界面-开始
-        'florr.io': 'florr.io',
-        'Ready': '开始',
+        'Ready': '启动！',
         'Connecting...': '正在连接...',
         'Logging in...': '正在登录...',
         'Loading...': '加载中...',
         'Account': '账号',
         'Changelog': '更新日志',
-        'Join our Discord community!': '加入我们的Discord社区！',
-        '加入我们的QQ群!': '加入我们的QQ群！',
-
+        'Join our Discord community!': '加入我们的Discord社区!',
+        '加入我们的QQ群!': '加入我们的QQ群!',
+        'Garden': '花园',
+        'Desert': '沙漠',
+        'Ocean': '海洋',
+        'Jungle': '丛林',
+        'Hel': '地狱（PvP）',
 
 
 
@@ -77,11 +88,18 @@
         'Hide common drops': '隐藏常见掉落',
         'Hide unusual drops': '隐藏少见掉落',
         'Screen shake': '画面抖动',
+        'Auto-join squads': '自动加入小队',
+        'Realm': '领域（服务器）',
+        'Automatic': '自动',
+        'Juliett (US)': '朱丽叶（美国）',
+        'Romeo (EU)': '罗密欧（欧洲）',
+        'Sierra (ASIA)': '塞拉（亚洲）',
 
         'Credits': '荣誉墙',
         'Special Thanks': '特别鸣谢',
         'Made by Matheus Valadares': '制作: Matheus Valadares',
-        'Some icons by Lorc Skoll from game-icons.net': '部分图标: Lorc Skoll 来自 game-icons.net',
+        'Some icons by Lorc & Skoll from game-': '部分图标: Lorc & Skoll 来自',
+        'icons.net': 'game-icons.net',
         'Some icons from twemoji.twitter.com': '部分图标: twemoji.twitter.com',
         'Some tiles by kenney.nl': '部分纹理贴图: kenney.nl',
 
@@ -91,16 +109,46 @@
 
 
 
+        //用户界面-账号
+        'Play as guest': '以游客身份游玩',
+        'Sign in with Discord': '用Discord登录',
+        'Sign in with Apple': '用Apple登录',
+        'If you already have a guest account in this device,': '如果你在这个设备上已经有一个游客账号了，',
+        'signing in will link that account and keep your progress.': '登录将会连接那个账号并保留你的进度。',
+        'Linked': '已连接',
+        'Logout': '退出登录',
+        '(connecting)': '正在连接',
+        'Guest': '游客',
+        'You can choose a nickname once you link an account or get level 10.': '当连接到一个账号或达到10级时，你能选择一个昵称。',
+        'You can link your account to': '你可以连接你的账号以',
+        'keep your progress across devices.': '在不同设备上保持你的进度。',
+        'Account ID:': '账号ID：',
+        'Support PIN:': '个人身份识别码（Support PIN）:',
+        '(click to show)': '（点击以显示）',
+        'Save this in case you lose access to your account': '当你失去对你账户的许可时保存它',
+        'Do not share your support PIN with anyone': '不要与任何人分享你的support PIN',
+        'Link your account to save your progress': '连接你的账户以保存你的进度',
 
 
         //用户界面-商店
         'Shop': '商店',
         'Today\'s offers:': '今日售卖',
         'You gain stars as you watch ads, or you can': '您可以在看广告时获得星星，',
+        'You gain stars as you watch ads as soon as you': '只要您获得第一个传奇花瓣，',
+        'collect your first legendary petal, or you can': '您就可以在看广告时获得星星；',
+        'You gain stars by completing challenges, or you can': '您可以在完成挑战时获得星星，',
         'buy some by clicking the number on the right.': '也可以点击右边的数字购买一些。',
         'I have too much money': '我有超级多的钱',
         'In case of any issues with your purchase,': '如果您的购买过程出现任何问题，',
         'please contact support@m28.io': '请联系 support@m28.io',
+        'please contact our payment processor:': '请联系我们的支付处理员：',
+        'support@xsolla.com or live chat at xsolla.com.': 'support@xsulla.com 或是在 xsolla.com 直播聊天。',
+        'Lock': '锁定',
+        'Daily Challenge': '每日挑战',
+        'Challenge': '挑战',
+        'Defeat these enemies:': '击败这些敌人：',
+        'Challenge available': '该挑战只对',
+        'for supporters only.': '支持者有效。',
 
         'hour': '小时',
         'hours': '小时',
@@ -108,6 +156,57 @@
         'minutes': '分钟',
         'second': '秒',
         'seconds': '秒',
+        ' hour': ' 小时',
+        ' hours': ' 小时',
+        ' minute': ' 分钟',
+        ' minutes': ' 分钟',
+        ' second': ' 秒',
+        ' seconds': ' 秒',
+
+
+
+
+        //用户界面-教程
+        'Tutorial': '教程',
+        'Next': '继续',
+        'You must be alive to proceed in the tutorial.': '你必须存活以继续推进教程。',
+        'You must be in-game for this part of the tutorial, just click the big green READY button.': '在这个部分的教程中，你必须在游戏中。要进入游戏，只要按下那个大大的、绿绿的『启动！』按钮就行了。',
+        //教程-开始界面
+        'You seem to be new here, let\'s get you through the basics.': '你看起来是新来的小fafa，让我们带你度过基础时期。',
+        'Click READY to start.': '按下『启动！』以开始。',
+        //教程-移动
+        'Use your mouse to move. Your flower will automatically follow your cursor.': '使用你的鼠标以移动。你的小花花会自动跟随你的光标。',
+        'You can change to keyboard movement in the settings menu.': '在设置菜单中你可以改为键盘移动。',
+        'Move a little bit to proceed.': '走几步以继续。',
+        //教程-敌人
+        'Those insects are your enemies. Destroying them has a chance of dropping new petals.': '这些生物（除了不是红脸的花花）（英文原文是昆虫，其实不止）是你的敌人。干掉（摧毁）它们有一个掉落新花瓣的（微小的）机会。',
+        'Find one and destroy it.': '找到一只并干掉。',
+        'You might find helpful to hold down your left mouse button to extend your petals.': '你可能会发现长按鼠标左键扩张你的花瓣很有用。',
+        //教程-掉花瓣
+        'Keep destroying enemies until they drop a petal, then get close to the petal to collect it.': '一直击杀敌人直到它们掉了花瓣，然后接近花瓣掉落物（卡）以收集。\nTips: 花瓣过一段时间后会刷新消失，后期有加捡拾范围的花瓣（磁铁）和技能，10级之前一般是搞不到的。',
+        //教程-装花瓣
+        'If you have space in your loadout when you collect a petal, it\'ll go there, otherwise it\'ll go to your inventory.': '当你捡起花瓣时，如果你的装备栏有空卡槽，它会去那里，否则会去你的物品栏。',
+        'Click the petal you just collected to equip it (or use the numeric hotkey for it).': '点击你刚刚捡起的花瓣以装备（或用数字热键）。\nTips: 你也可以通过技能加装备栏槽位，这是首选，加到10槽就满了。',
+        //教程-升级
+        'To level up, just keep destroying some insects.': '升级或完成成就能加技能点（TP）。要升级，只要一直击杀生物就行了。',
+        //教程-天赋
+        'Use this new talent point you got to unlock any talent.': '用你新获得的这个新天赋点来解锁任何天赋。',
+        'Remember you need to click and HOLD to upgrade a talent.': '记住，你需要点击并长按才能升级天赋。',
+        //教程-准备合成
+        'Now we need to collect 5 of the same ': '现在我们需要收集5个相同的稀有度为',
+        ' petals to craft an ': '的花瓣以合成一个种类相同、稀有度为',
+        ' petal.': '的花瓣。',
+        'Keep destroying some insects to collect a couple more petals.': '一直击杀敌人以收集更多花瓣。',
+        //教程-合成
+        'Now try to craft your first petal.': '现在试着合成你的第一个花瓣。',
+        'Note that you might need to unequip some petals to have enough to do this craft.': '注意，你可能需要卸下一些花瓣以拥有足够的花瓣合成。',
+        'You need 5 of the same petal.': '你需要5个相同的花瓣（除了 普通Common 的 基本Basic，这合不了）。',
+        'Don\'t worry, we loaded the dice for this one, it will succeed.': '不用担心，我们调了这次的概率，这次会成功的。',
+        //教程-结束
+        'That\'s it! Remember to use the inventory to equip and unequip petals.': '好了！记得用物品栏以装备或卸载花瓣。',
+        'You can click a petal to equip/unequip it.': '你能通过点击一个花瓣来装备/卸载它。',
+        'Keep expanding your petal collection and good luck!': '不断扩展你的花瓣收集。另外，祝你好运！',
+
 
 
 
@@ -119,7 +218,7 @@
         'A mysterious entity': '未知生物',
         'Continue': '继续',
         'GAME OVER': '游戏结束',
-
+        'Close': '关闭',
 
 
 
@@ -127,56 +226,77 @@
         //用户界面-消息栏
         'Press [ENTER] or click here to chat': '按 [ENTER] 键或点击这里聊天',
         'No one is around to hear you.': '抱歉，附近没有玩家能听到您说话',
-
+        'You\'re doing that too much.': '您发消息的速度过于快了',
+        'Joined squad.': '加入小队。',
+        'Left squad.': '退出小队。',
+        ' has joined the squad.': '加入了小队。',
+        ' has left the squad.': '退出了小队。',
 
 
 
 
         //用户界面-挂机检查
-        'AFK Check': '每日一问',
-        'Are you here?': 'M28 找到双亲了吗？',
-        'I\'m here': '没找到',
+        'AFK Check': '挂机检查',
+        'Are you here?': '您还在这里吗？',
+        'I\'m here': '我在',
 
 
 
 
 
         //用户界面-地图名称
-        'Centralia': '森特罗莉亚(主城)',
-        'Centralia Fields 1': '森特罗莉亚1区(石头)',
-        'Centralia Fields 2': '森特罗莉亚2区(下水道)',
-        'Centralia Fields 3': '森特罗莉亚3区(瓢虫)',
-        'Centralia Fields 4': '森特罗莉亚4区(断桥)',
-        'Centralia Fields 5': '森特罗莉亚5区(蜈蚣)',
-        'Centralia Fields 6': '森特罗莉亚6区(黄蜂)',
-        'Centralia Fields 7': '森特罗莉亚7区(蒲公英)',
-        'Centralia Maze': '森特罗莉亚-迷宫',
+        'Centralia': '中心之地',
+        'Centralia Fields 1': '后花园 1 (石头)',
+        'Centralia Fields 2': '后花园 2',
+        'Centralia Fields 3': '后花园 3 (瓢虫)',
+        'Centralia Fields 4': '后花园 4',
+        'Centralia Fields 5': '后花园 5 (蜈蚣)',
+        'Centralia Fields 6': '后花园 6 (黄蜂)',
+        'Centralia Fields 7': '后花园 7 (蒲公英)',
+        'Centralia Maze': '后花园迷宫',
 
-        'Centralia Sewers 1': '下水道1区(飞蛾)',
-        'Centralia Sewers 2': '下水道2区(蟑螂)',
-        'Centralia Sewers 3': '下水道3区(苍蝇)',
-        'Centralia Sewers 4': '下水道4区(蜘蛛)',
+        'Centralia Sewers 1': '后花园下水道 1 (飞蛾)',
+        'Centralia Sewers 2': '后花园下水道 2 (蟑螂)',
+        'Centralia Sewers 3': '后花园下水道 3 (苍蝇)',
+        'Centralia Sewers 4': '后花园下水道 4 (蜘蛛)',
 
-        'Centralia Beach': '森特罗莉亚-海滩',
-        'East Waters 1': '东海1区',
-        'East Waters 2': '东海2区',
-        'East Waters 3': '东海3区-迷宫',
-        'East Waters 4': '东海4区(贝壳)',
-        'Jellyfish Fields': '水母区(水母)',
-        'East Waters 6': '东海6区(水蛭)',
-        'Crab Kingdom': '螃蟹王国(泡泡&螃蟹)',
+        'Centralia Beach': '后花园海滩',
+        'East Waters 1': '东部水域 1',
+        'East Waters 2': '东部水域 2',
+        'East Waters 3': '东部水域 3',
+        'East Waters 4': '东部水域 4 (贝壳)',
+        'East Waters 6': '东部水域 6 (水蛭)',
+        'Jellyfish Fields': '水母之地 (水母)',
+        'Crab Kingdom': '螃蟹王国 (泡泡&螃蟹)',
 
-        'South Desert 1': '沙漠南部1区(沙尘暴)',
-        'South Desert 2': '沙漠南部2区(火蚁狱)',
-        'South Desert 3': '沙漠南部3区(仙人掌)',
-        'South Desert 4': '沙漠南部4区(闪瓢虫)',
-        'South Desert 5': '沙漠南部5区(甲虫)',
+        'South Desert 1': '南部沙漠 1 (沙尘暴)',
+        'South Desert 2': '南部沙漠 2',
+        'South Desert 3': '南部沙漠 3 (仙人掌)',
+        'South Desert 4': '南部沙漠 4 (闪亮瓢虫)',
+        'South Desert 5': '南部沙漠 5 (甲虫)',
 
-        'Ant Hell 1': '火蚁狱(火蚁后)',
-        'Ant Hell 2': '黑蚁狱(黑蚁后)',
-        'Ant Hell 3': '白蚁狱(白蚁领主)',
+        'Ant Hell 1': '火蚁地狱 (火蚁后)',
+        'Ant Hell 2': '黑蚁地狱 (黑蚁后)',
+        'Ant Hell 3': '白蚁地狱 (白蚁领主)',
 
 
+
+        //用户界面-成就
+        ' completed': " 已完成",
+        'Reward': '奖励',
+        'Track': '追踪',
+        'Track automatically': '自动追踪',
+        //成就-Common
+        'Consolation prize': '安慰奖',
+        'Fail to craft a petal and lose 4 petals.': '合成花瓣失败并失去4个花瓣。',
+        'Complete the tutorial.': '完成教程。',
+        //成就-Unusual
+        //成就-Rare
+        //成就-Epic
+        //成就-Legendary
+        //成就-Mythic
+        //成就-Ultra
+        //成就-Super
 
 
 
@@ -184,7 +304,7 @@
         //用户界面-仓库
         'Inventory': '仓库',
         'Drag a petal to equip it': '把花瓣拖到装备栏上来使用它',
-        'Stack': '按花瓣种类排序（默认按稀有度排序）',
+        'Stack': '可堆叠',
 
 
 
@@ -192,18 +312,31 @@
 
         //花瓣详细介绍
         'Air': '空气',
-        'It\'s literally nothing.': '空白，可占据卡槽。',
+        'It\'s literally nothing.': '只能加花花的半径。唬人/挡路/撞击流用或许能发挥出奇效？',
+        'Extra radius: ': '额外半径：',
+
+
+
+        'Amulet': '护身符',
+        'Converts a percentage of overheal into shields.': '把一部分溢出的治疗转化为护盾。',
+        'Overheal Conversion: ': '溢出治疗转换',
+
+
+
+        'Ankh': '安卡',
+        'An ancient relic.': '一种古老的遗物。',
+        'When destroyed, will teleport the flower back to where it was destroyed.': '当被摧毁时，会把花朵传送回被摧毁的地方。',
 
 
 
         'Antennae': '触角',
-        'Allows your flower to sense foes farther away. Does not stack.': '让视野更宽广。此花瓣的效果不能叠加。',
+        'Allows your flower to sense foes farther away.': '让视野更宽广。此花瓣的效果不能叠加。',
         'Extra vision: ': '额外视野：',
 
 
 
         'Basic': '基本',
-        'A nice petal, not too strong but not too weak.': '一个中庸花瓣，不是很强，也不是很弱。',
+        'A nice petal, not too strong but not too weak.': '一个不错的花瓣，不是很强，也不是很弱。',
         'Damage: ': '伤害：',
         'Health: ': '血量：',
 
@@ -215,14 +348,32 @@
 
 
 
+        'Battery': '电池',
+        'Discharges electricity whenever the flower gets hit.': '在花朵受到攻击时发出电流。',
+        'Charges: ': '单电池可放电次数：',
+
+
+
+        'Blood Stinger': '血刺',
+        'It really hurts, but it\'s very fragile.': '它的确打人很疼，却十分脆弱。',
+        'Deals some of the damage dealt back to the flower.': '对花朵造成一部分反噬。',
+        'Self Damage: ': '对自己的反伤：',
+
+
+
         'Bone': '骨头',
-        'Sturdy.': '硬骨头。',
+        'Sturdy.': '♥硬硬的♥（doge）',
         'Armor: ': '护甲：',
 
 
 
         'Bubble': '泡泡',
-        'Physics are for the weak.': '加速推进，跑图利器。',
+        'Physics are for the weak.': '弱者才遵守物理定律。（加速推进，跑图利器）',
+
+
+
+        'Bur': '刺果',
+        'Decreases armor of affected unit. Does not stack with itself.': '减少作用单位的护甲。不与其自身叠加。',
 
 
 
@@ -239,8 +390,19 @@
 
 
 
+        'Card': '纸牌',
+        'A playing card. Likely marked.': '一张扑克牌。似乎被动了手脚。喂，别出老千！',
+
+
+
         'Carrot': '胡萝卜',
         'Sturdy and reliable. Can be shot and bounces off walls.': '牢固且可靠，发射后碰到墙壁会反弹。',
+
+
+
+        'Poker Chip': '扑克筹码',
+        'Chip': '筹码',
+        'ALL IN.': '孤注一掷。',
 
 
 
@@ -252,14 +414,29 @@
 
 
         'Clover': '幸运草',
-        'Increases your luck. Does not stack with itself.': '提高幸运值，单人不叠加，多人上限为 4.0 幸运值。',
-        'Higher luck increases the chances of finding rarer mobs.': '更高的幸运值可以提高更稀有的生物出现的概率。',
+        'Increases your luck.': '提高幸运值（luck），单人不叠加，多人上限为 4.0 幸运值。',
+        'Luck is used by specific petals to change their stats.': '一些特定的花瓣使用幸运值来改变它们的数据。',
         'Luck: ': '幸运：',
+
+
+
+        'Coin': '硬币',
+        'The power of capitalism compels you!': '金钱所迫！',
+
+
+
+        'Compass': '指南针',
+        'This crappy thing might to able to find something...': '这个糟糕的玩意儿可能可以找到一些东西……',
 
 
 
         'Corn': '玉米',
         'Takes a long time to spawn, but has a lot of health.': '冷却时间比较长，但是花瓣血量很高。',
+
+
+
+        'Corruption': '腐化',
+        'Corrupts one\'s soul, turning them against their own kind.': '腐蚀人（？）的灵魂，使他们对自己的同类产生敌意。',
 
 
 
@@ -270,7 +447,7 @@
 
         'Cutter': '齿轮',
         'A friend used to own this... now it\'s time for revenge.': '一位朋友曾经拥有这个，现在是时候为它报仇了。',
-        'Increases body damage. Does not stack.': '增加体伤，不叠加。',
+        'Increases body damage.': '增加体伤。',
         'Body Damage: ': '体伤：',
 
 
@@ -282,9 +459,27 @@
 
 
         'Dandelion': '蒲公英',
-        'Its interesting properties inhibits healing effects on affected units.': '击中后可降低目标生物的治疗效果。',
+        'Its interesting properties inhibits healing effects on affected units.': '它很有意思的功能是击中后可降低目标生物的治疗效果。',
         'Affected units have their healing reduced by 20%. Stacks with itself.': '目标生物治疗效果减少 20%，可叠加。',
         'Duration: ': '持续时间：',
+
+
+
+        'Mark': '标记',
+        'Dark Mark': '暗黑标记',
+        'A dark mark that binds itself to a fallen soul.': '一个将自己束缚在堕落灵魂上的黑暗印记。',
+
+
+
+        'Dice': '骰子',
+        'Has a 5% chance of dealing 35x damage.': '有 5% 的几率造成 35倍 伤害',
+        'Chance increases by 4% per point in luck.': '每点幸运值使几率加 4%。',
+
+
+
+        'Disc': '圆盘',
+        'Reduces damage taken from collisions with mobs and flowers.': '减少与生物和花朵碰撞产生的碰撞伤害。',
+        'Collision Damage Resistance: ': '碰撞伤害抗性：',
 
 
 
@@ -303,19 +498,26 @@
 
 
         'Faster': '加速',
-        'It\'s so light it makes your other petals spin faster.': '装备后可提高花瓣旋转速度。',
+        'It\'s so light it makes your other petals spin faster.': '它太轻了，以至于——装备后可提高花瓣旋转速度。',
         'Rotation Speed:': '旋转速度增幅：',
 
 
 
+        'Glass': '玻璃',
+        'Phases through enemies.': '穿过敌人。',
+        'Cannot damage enemies more often than a certain interval.': '不能在一定间隔内更频繁地伤害敌人。',
+        'Interval: ': '伤害间隔：',
+
+
+
         'Grapes': '葡萄',
-        '4 in 1 deal. Now with a secret ingredient: poison.': '分为四份，造成伤害和毒伤，整个打出按一份算。',
+        'It goes poof. Now with a secret ingredient: poison.': '呲溜一声就飞出去了。造成伤害和毒伤，整个打出按一份算。',
         'Poison: ': '毒伤：',
 
 
 
         'Heavy': '重',
-        'This thing is so heavy that nothing gets in the way.': '这个花瓣能推动生物。',
+        'This thing is so heavy that nothing gets in the way.': '这东西太重了让什么都无法阻挡它。（这个花瓣能推动生物）',
         'Slows down petal rotation speed when equipped.': '装备后且加载完成时，会减慢花瓣的旋转速度。',
 
 
@@ -340,8 +542,8 @@
 
 
         'Leaf': '叶子',
-        'Gathers energy from the sun to heal your flower passively.': '从阳光中收集能量来持续回复血量，冷却期间亦生效。',
-        'Can be eaten by friendly mobs to heal.': '也可以帮助除挖掘者外的友方生物回血。',
+        'Gathers energy from the sun to heal your flower passively.': 'LeaF（不是）光合作用补充血量，冷却期间亦生效。',
+        'Can be eaten by friendly mobs to heal.': '也可以帮助除挖掘者外的友方生物回血（被吃掉）。',
         'Mob Heal: ': '治疗生物：',
 
 
@@ -364,14 +566,28 @@
 
 
         'Magnet': '磁铁',
-        'Increases drop pickup range.': '扩大拾取掉落物的范围。',
-        'Does not stack with itself.': '拾取效果不叠加。',
-        'Pickup range: ': '拾取范围：',
+        'Increases drop pick up range.': '扩大拾取掉落物的范围。',
+        'Pick up range: ': '拾取范围：',
+
+
+
+        'Orb': '宝珠',
+        'Mana Orb': '魔法宝珠',
+        'Creates mana.': '创造魔法（值）。',
+        'Mana: ': '魔力值：',
+        'Allows finding magic petals.': '魔法之门的钥匙。允许你找到魔法花瓣。',
 
 
 
         'Missile': '导弹',
-        'You can actually shoot this one.': '您可以把这个花瓣发射出去。',
+        'You can actually shoot this one.': '你可以把这个花瓣发射出去。',
+
+
+
+        'Moon': '月',
+        'Moon Rock': '月石',
+        'This thing is so big your petals orbit it instead.': '这个东西大到能让其他花瓣围着它转。',
+        'Where did you find this anyway?': '不过你是在哪里找到它的？',
 
 
 
@@ -386,7 +602,7 @@
 
 
         'Peas': '豌豆',
-        '4 in 1 deal.': '分 4 份，整体打出算 1 份。',
+        'It goes poof.': '呲溜一声就飞出去了。整体打出算1份。',
 
 
 
@@ -396,7 +612,7 @@
 
 
         'Plank': '木板',
-        'Does 5x damage vs projectiles and petals.': '对花瓣和飞行道具造成 5 倍伤害。',
+        'Does 20x damage vs projectiles and petals.': '对花瓣和飞行道具造成 20 倍伤害。',
 
 
 
@@ -406,27 +622,38 @@
 
 
         'Poo': '便便',
-        'Makes mobs less likely to want to attack you. Does not stack.': '减少生物发现你的范围，效果不叠加。',
+        'Makes mobs less likely to want to attack you.': '减少生物发现你的范围，效果不叠加。',
         'Mob aggro range: ': '生物发现范围：',
 
 
 
+        'Privet': '女贞',
+        'Privet Berry': '女贞子',
+        'Deals extra ': '每秒在已存在的',
+        'Poison': '剧毒',
+        ' damage based on the existing ': '伤害基础上造成额外的',
+        ' damage per second.': '伤害。',
+        'Extra Poison: ': '额外的毒伤：',
+
+
         'Powder': '粉末',
         'Mysterious Powder': '神秘的粉末',
-        'Increases movement speed. Does not stack.': '提高移动速度，效果不叠加。',
+        'Increases movement speed.': '提高移动速度。',
+        'Disabled if flower takes damage or if near a mob higher than a certain rarity.': '如果花花受到伤害或有一个稀有度高于特定值的生物在附近，它将会被禁用',
         'Movement Speed: ': '移动速度增幅：',
 
 
 
         'Relic': '遗物',
         'Mysterious Relic': '神秘的遗物',
-        'A strange relic. Damage taken is spread among other wearers.': '奇怪的遗物，特定范围内同时佩戴它的玩家会共享部分伤害。',
+        'A strange relic. Significantly increases maximum health.': '一个奇怪的遗物。显著提高生命值上限（貌似是按百分比算的？）',
+        'Damage taken is spread among other wearers.': '特定范围内同时佩戴它的玩家会共享部分伤害。（搭配 闪电 等受伤时发挥作用的花瓣效果更佳）',
         '% distributed: ': '受伤分摊比例：',
 
 
 
         'Rice': '米',
-        'Spawns instantly, but not very strong.': '生成速度非常快，但是很脆弱。',
+        'Spawns very quickly, but not very strong.': '生成速度非常快，但是很脆弱。',
 
 
 
@@ -435,26 +662,46 @@
 
 
 
+        'Root': '根',
+        'Provides additional armor but only while in the defensive position.': '提供额外的护甲但只在防御状态生效。',
+        'flower Armor: ': '花朵护甲防御值：',
+
+
+
         'Rose': '玫瑰',
         'Its healing properties are amazing. Not so good at combat though.': '回血效果惊艳，但战斗过程中容易被损坏。',
+
+
+
+        'Rubber': '橡胶',
+        'Increases knockback received. Also absorbs lightning damage dealt to the flower.': '增加受到的击退。也能吸收对玩家造成的闪电伤害。',
 
 
 
         'Salt': '盐',
         'Reflects some of the damage you take back to the enemy that dealt it.': '以特定比例反弹敌方单位对我方造成的伤害。',
         'Reflected damage is reduced by 75% against flowers.': '伤害反弹效果对其他玩家 -75%。',
+        'Higher rarity mobs have higher resistance to damage reflection.': '稀有度较高的生物对伤害反弹有更高的抗性。',
         'Damage Reflection: ': '伤害反弹比例：',
+        '% (vs ': '%（对抗',
+        ' mobs), ': '稀有度的生物时），',
+        '% (vs flowers)': '%（对抗花花时）',
 
 
 
         'Sand': '沙子',
-        'A bunch of sand particles.': '一团沙子(4 颗沙粒)。',
+        'A bunch of sand particles.': '一团沙子。',
 
 
 
         'Shell': '贝壳',
         'Adds a temporary shield to yourself or allies.': '给自己和其他玩家施加缓慢衰减的临时护盾。',
         'Shield: ': '护盾：',
+
+
+
+        'Shovel': '铲子',
+        'Becomes untargetable but unable to use petals for a limited time.': '在有限的时间内变得无法被攻击，但不能使用花瓣。',
 
 
 
@@ -466,6 +713,8 @@
         'Sponge': '海绵',
         'Spreads damage taken by the flower over a period of time.': '把玩家受到的伤害分摊到一段时间内缓慢扣除。',
         'If destroyed, deals remaining damage all at once.': '如果被打破了，储存的伤害将一次性结算。',
+        'Does not delay ': '不延缓',
+        ' damage.': '伤害。',
         'Period: ': '周期：',
 
 
@@ -481,7 +730,7 @@
 
         'Stick': '树枝',
         'Mysterious Stick': '神秘的树枝',
-        'A mysterious stick that summons the forces of the wind.': '这个神秘的树枝可以召唤风的力量（生成沙尘暴）',
+        'A mysterious stick that summons the forces of the wind.': '这个神秘的树枝可以召唤风的力量来生成沙尘暴。',
         'Spawn: ': '生成：',
 
 
@@ -491,37 +740,44 @@
 
 
 
+        'Talisman': '护符',
+        'Talisman of Evasion': '闪避护符',
+        'A necklace that allows the wearer to anticipate enemy attacks.': '一条项链，可以让佩戴者预测敌人的攻击。',
+        'Flower Evasion: ': '闪避概率：',
+
+
+
         'Third Eye': '第三只眼',
         'Allows your flower to expand your petals further out.': '能使装备的花瓣进一步张开，攻击距离更远。',
-        'Does not stack.': '花瓣效果不叠加',
+        'Does not stack.': '花瓣效果不叠加。',
         'Extra range: ': '距离加成：',
 
 
 
         'Tomato': '番茄',
         'Gets stronger over time, but then spoils.': '成熟度越高伤害越高，但是容易腐烂。',
+        'Gets stronger over time.': '成熟度越高伤害越高',
 
 
 
         'Uranium': '铀',
         'Periodically releases radiation in a large radius.': '周期性地释放辐射伤害，可叠加，但对自身的毒伤不叠加。',
-        'Causes even the most passive mobs to become very aggressive.': '使所有可移动生物变为主动敌对生物。',
-        'Stronger the closer the victim is to the source.': '生物离辐射源越近，受到的伤害越高。',
         '-75% damage versus other flowers.': '对其他玩家的伤害-75%。',
+        'Effect strength depends on distance to petal.': '影响的力度取决于到花瓣的距离。',
 
 
 
         'Web': '网',
-        'It\'s really sticky.': '黏糊糊的，用于减速敌人',
+        'It\'s really sticky.': '黏糊糊的，用于减速敌人。',
 
 
 
         'Wing': '翅膀',
-        'It comes and goes.': '像回旋镖一样的翅膀',
+        'It comes and goes.': '它飞来飞去。像回旋镖一样的翅膀。',
 
 
 
-        'Yggdrasil': '世界树之叶',
+        'Yggdrasil': 'Yggdrasil！世界树',
         'A dried leaf from the Yggdrasil tree.': '从世界树上掉落的枯叶。',
         'Rumored to be able to bring the fallen back to life.': '据说能够让死亡的花朵复活。',
         'Revive Heal: ': '复活后血量：',
@@ -529,7 +785,7 @@
 
 
         'Yin Yang': '阴阳',
-        'This mysterious petal affects the rotation of your petals in unpredictable ways.': '这个神秘的花瓣能以特殊的方式改变其它花瓣的转动方式或分布形态。',
+        'This mysterious petal affects the rotation of your petals in unpredictable ways.': '这个神秘的花瓣能以不可预测（真的吗）的方式改变其它花瓣的转动方式或分布形态。',
 
 
 
@@ -539,7 +795,7 @@
 
 
 
-
+        //新版本：Talent天赋
         //用户界面-技能
         'Skills': '技能',
         'SP': '技能点',
@@ -547,12 +803,14 @@
         'absorbing': '吸收',
         ' petals to gain levels': '花瓣来提升等级，从而获得技能点',
         'HOLD to upgrade': '长按升级',
-        'Reset': '重置技能',
+        'Reset': '重置',
         'This will refund all your SP points.': '将返还您全部技能点。',
         'WARNING:': '警告',
         'It will cost you 5 levels.': '这将使您降低5级。',
         'Cancel': '取消',
-
+        //自己加的（适配新版本）
+        'Talents': '天赋',
+        'TP': '天赋点',
 
 
 
@@ -671,7 +929,7 @@
 
 
 
-        'Summoner': '召唤物血量',
+        'Summoner': '召唤师',
 
         ' of summoned mobs by 10%.': '：+10%，基于召唤物基础血量',
 
@@ -714,8 +972,12 @@
 
 
         //生物详细介绍
+        'There\'s something magical about this one.': '它身上有魔力♂。（bushi',
+
+
+
         'Ant Egg': '蚂蚁蛋',
-        'Not yet an ant but perhaps soon': '在不久后会变成蚂蚁。',
+        'Not yet an ant but perhaps soon.': '在不久后会变成蚂蚁。',
 
 
 
@@ -730,7 +992,7 @@
 
 
         'Baby Fire Ant': '幼火蚁',
-        'This ant is on fireeeeeeeeeeeeee': '这类蚂蚁脾气比较暴躁。',
+        'This ant is on fireeeeeeeeeeeeee.': '这类蚂蚁脾气比较火火火火火火火火火火火火火爆。',
 
 
 
@@ -738,6 +1000,13 @@
         'These creatures appear to be connected somehow.': '这类蚂蚁似乎存在某种关联。',
         'Psyonic Connection': '命运共同体',
 
+
+        'Termite Egg': '白蚁蛋',
+        'Not yet a termite but perhaps soon.': '还不是白蚁但可能很快是了。',
+
+
+        'Termite Mound': '白蚁窝',
+        'Termites go in, and come out. Can\'t explain that.': '白蚁们进进出出。不可描述。（这是原文！你信我！）（开音趴？）',
 
 
         'Bee': '蜜蜂',
@@ -747,19 +1016,23 @@
 
         'Beetle': '甲虫',
         'It\'s hungry and flowers are its favorite meal.': '这种饿货最喜欢吃花花。',
+        'Scourge that spawns in the other plane.': '在异域生成的祸害。',
 
         'Bubble': '泡泡',
         'Pop': '吹弹可破。',
 
         'Bumble Bee': '熊蜂',
         'GOTTA RUN.': '溜了溜了。',
-        'Missile health: ': '自身刺血量：',
-        'Missile damage: ': '自身刺伤害：',
+        'Pollen Health: ': '花粉血量：',
+        'Pollen Damage: ': '花粉伤害：',
+        'Missile Health: ': '自身刺血量：',
+        'Missile Damage: ': '自身刺伤害：',
 
-
+        'Bush': '灌木',
+        'Don\'t misunderestimate me.': '不要轻敌了。',
 
         'Cactus': '仙人掌',
-        'Avoid touching it, it hurts.': '撞上它真的很疼。',
+        'Avoid touching it, it hurts.': '别撞，很疼。',
 
 
 
@@ -768,18 +1041,13 @@
 
 
 
-        'Cockroach': '蟑螂',
-        'Gotta go FAST... until they get tired.': '速度非常快，除非它们累了。',
-
-
-
         'Crab': '螃蟹',
-        'Mr. Crab': 'Mr. Crab ♂',
+        'Mr. Crab.': 'Crab先生♂',
 
 
 
         'Dandelion': '蒲公英',
-        'Puffy': '蓬松的花伞。',
+        'Puffy.': '蓬松的花伞。',
 
 
 
@@ -789,7 +1057,7 @@
 
 
         'Digger': '挖掘者',
-        'Wrong game, bud': '似乎喜欢挖蚁穴？',
+        'Wrong game, bud.': '哥们，进错游戏了。（digdig.io）（似乎喜欢挖蚁穴？）',
 
 
 
@@ -804,14 +1072,21 @@
 
 
         'Fire Ant Egg': '火蚁蛋',
-        'This ant is not yet on fire': '此时的火蚁尚未开始躁动。',
+        'This ant is not yet on fire.': '此时的火蚁尚未开始躁动。',
 
+
+        'Firefly': '萤火虫',
+        'Oooooh shiny.': '呜哦好闪亮。',
+        'Bounces: ': '反弹：',
 
 
         'Fly': '苍蝇',
-        'Hzzzzzzzzzzzz': '围着 M28 乱飞。',
+        'Hzzzzzzzzzzzz.': '围着 M28 乱飞。',
+        'Evasion: ': '闪避：',
 
 
+        'Gambler': '赌徒',
+        'This can happen to YOU.': '这会发生在『你』身上。',
 
         'Hornet': '黄蜂',
         'These aren\'t quite as nice as the little bees.': '这种生物可没有小蜜蜂那么友好。',
@@ -819,21 +1094,27 @@
 
 
         'Jellyfish': '水母',
-        'Makes the most delicious jam': '可制作最美味的jam。',
+        'Makes the most delicious jam.': '可制作最美味的jam。',
 
 
 
         'Ladybug': '瓢虫',
         'Shiny, cute and mostly harmless.': '长大后会去找世界树的闪亮瓢虫。',
         'Cute and harmless.': '可爱且无邪。',
-        'Cute and harmless... if left unprovoked.': '可爱且无邪（无端',
+        'Cute and harmless... if left unprovoked.': '可爱且无邪……如果没有人挑衅的话。',
 
 
+        'Leafbug': '木叶虫',
+        'It\'s not a leaf, but it is a bug.': '这不是一片树叶，是一只虫子。',
 
         'Leech': '水蛭',
-        'Slurp slurp': '嘬一口。',
+        'Slurp slurp.': '嘬一口。',
         'Lifesteal: ': '吸血量：',
 
+
+        'Mantis': '螳螂',
+        'You better pray you don\'t become dinner.': '你最好祈祷你不要成为它的大餐。',
+        'Armor Debuff: ': '护甲负面效果：',
 
 
         'Moth': '飞蛾',
@@ -845,9 +1126,11 @@
         'You must have done something really bad if she\'s chasing you.': '如果她追赶你，那一定是你干坏事惹到她了。',
 
 
+        'Roach': '蟑螂',
+        'Gotta go FAST... until they get tired.': '将会跑得很快……直到它们累了。',
+
 
         'Queen Fire Ant': '火蚁后',
-
 
 
         'Rock': '石头',
@@ -861,19 +1144,20 @@
 
 
         'Scorpion': '蝎子',
-        'IT STINGS': '它的螫带毒。',
+        'IT STINGS!': '它的螫带毒！',
         'Missile Poison: ': '发射的螫毒伤：',
 
 
 
         'Shell': '贝壳',
-        'Not an advertisement': '自带吸铁石的珠宝批发商。',
+        'Not an advertisement.': '什么？这不是广告，而是自带吸铁石的珠宝批发商。',
+        'Pearl Health': '珍珠血量：',
+        'Pearl Damage': '珍珠伤害：',
 
 
 
         'Soldier Ant': '兵蚁',
         'It\'s got wings and it\'s ready to use them.': '翅膀硬了，随时准备搞事情。',
-
 
 
         'Soldier Fire Ant': '兵火蚁',
@@ -890,7 +1174,7 @@
 
 
         'Sponge': '海绵',
-        'Bob': '不是 Pizza。',
+        'Bob.': '宝宝。（这真的不是Pizza吗）',
 
 
 
@@ -900,14 +1184,18 @@
 
 
         'Starfish': '海星',
-        'His name is Patrick': '它的名字叫派大星。',
+        'His name is Patrick.': '它的名字叫派大星。',
 
-
+        'Target Dummy': '训练假人',
+        'How do you have this in your gallery?': '它怎么在你的图鉴里？',
 
         'Termite Overmind': '白蚁领主',
-        'The one who sees all.': '原来这就是大大的梦想。',
+        'The one who oversees all.': '注视着一切的幼白蚁。（bushi',
 
+        'Trader': '商人',
 
+        'Wasp': '胡蜂',
+        'They are ANGRY.': '它们非常生气。',
 
         'Worker Ant': '工蚁',
         'It\'s a bit temperamental, probably from working all the time.': '有点喜怒无常，估计是因为一直搬砖干活。',
@@ -925,23 +1213,25 @@
 
 
         //稀有度
-        'Common': '常见',
-        'Unusual': '少见',
-        'Rare': '稀有',
-        'Epic': '史诗',
-        'Legendary': '传奇',
-        'Mythic': '神话',
-        'Ultra': '究极',
-        'Super': '至臻',
+        'Common': '常见Common',
+        'Unusual': '罕见Unusaul',
+        'Rare': '稀有Rare',
+        'Epic': '史诗Epic',
+        'Legendary': '传奇Legendary',
+        'Mythic': '神话Mythic',
+        'Ultra': '究极Ultra',
+        'Super': '超级Super',
+        'Unique': '唯一Unique',
 
-        ' (Common)': '（常见）',
-        ' (Unusual)': '（少见）',
-        ' (Rare)': '（稀有）',
-        ' (Epic)': '（史诗）',
-        ' (Legendary)': '（传奇）',
-        ' (Mythic)': '（神话）',
-        ' (Ultra)': '（究极）',
-        ' (Super)': '（至臻）',
+        ' (Common)': '（常见Common）',
+        ' (Unusual)': '（罕见Unusual）',
+        ' (Rare)': '（稀有Rare）',
+        ' (Epic)': '（史诗Epic）',
+        ' (Legendary)': '（传奇Legendary）',
+        ' (Mythic)': '（神话Mythic）',
+        ' (Ultra)': '（究极Ultra）',
+        ' (Super)': '（超级Super）',
+        ' (Unique)': '（唯一Unique）',
     }
 
 
@@ -953,20 +1243,20 @@
         if (typeof (translate[text]) == 'string') { return translate[text] }
         switch (true) {
             //1.2% success chance
-            case (/% success chance/.test(text)): {
-                const probability = text.match(/.+(?=% success chance)/);
+            case (/\S+% success chance/.test(text)): {
+                const probability = text.match(/\S+(?=% success chance)/);
                 return `成功率 ${probability}%`;
             }
 
             //Store will change in 10 hours.
-            case (/Store will change in/.test(text)): {
+            case (/Store will change in [0-9][0-9]?[0-9]? \w\w\w\w\w?\w?\w?\./.test(text)): {
                 const timeNum = text.match(/(?<=Store will change in )[0-9]?[0-9]?[0-9]?(?=\s\w\w\w\w\w?\w?\w?\.)/);
                 const timeUnit = text.match(/(?<=Store will change in [0-9]?[0-9]?[0-9]?\s)\w\w\w\w\w?\w?\w?(?=\.)/);
                 return `货架将在 ${timeNum} ${getTranslate(timeUnit)}后刷新`;
             }
 
             //The Super Termite Overmind was defeated by you!
-            case (/was defeated by/.test(text)): {
+            case (/An? \w\w\w\w\w?\w?\w?\w?\w? .+ was defeated by .+!/.test(text)): {
                 const mobLevel = text.match(/(?<=The\s)\w\w\w\w\w?\w?\w?\w?\w?(?=\s)/);
                 const mobName = text.match(/(?<=The\s\w\w\w\w\w?\w?\w?\w?\w?\s).+(?=\swas)/);
                 const playerName = text.match(/(?<=was defeated by ).+(?=!)/);
@@ -974,17 +1264,29 @@
             }
 
             //A Super Termite Overmind has spawned!
-            case (/has spawned!/.test(text)): {
+            case (/An? \w\w\w\w\w .+ has spawned!/.test(text)): {
                 const mobLevel = text.match(/(?<=An?\s)\w\w\w\w\w(?=\s)/);
                 const mobName = text.match(/(?<=An?\s\w\w\w\w\w\s).+(?= has spawned!)/);
                 return `${getTranslate(mobLevel)} ${getTranslate(mobName)} 已在地图中生成！`;
             }
 
             //A Super Termite Overmind has spawned somewhere!
-            case (/has spawned!/.test(text)): {
+            case (/An? \w\w\w\w\w .+ has spawned somewhere!/.test(text)): {
                 const mobLevel = text.match(/(?<=An?\s)\w\w\w\w\w(?=\s)/);
                 const mobName = text.match(/(?<=An?\s\w\w\w\w\w\s).+(?= has spawned somewhere!)/);
                 return `${getTranslate(mobLevel)} ${getTranslate(mobName)} 已在某个地图中生成！`;
+            }
+
+            //WingDinGaster has joined the squad.
+            case (/.+ has joined the squad\./.test(text)): {
+                const playerName = text.match(/.+(?= has joined the squad\.)/);
+                return `${playerName} 加入了小队。`;
+            }
+
+            //WingDinGaster has left the squad.
+            case (/.+ has left the squad\./.test(text)): {
+                const playerName = text.match(/.+(?= has left the squad\.)/);
+                return `${playerName} 退出了小队。`;
             }
         }
         return text;
@@ -1000,8 +1302,8 @@
 
     //普通的日志输出，但加入了防止过快输出的措施
     function consoleTextInfoLog(string) {
-        if ((performance.timeOrigin + performance.now()) - timestamp >= 2333) {
-            timestamp = performance.timeOrigin + performance.now();
+        if ((performance.timeOrigin + performance.now()) - timestampForDebug >= 2333) {
+            timestampForDebug = performance.timeOrigin + performance.now();
             console.log(string);
         }
     }
@@ -1017,7 +1319,7 @@
 
     //获取模糊化的字体大小 | 主要用来避免花瓣上小字的字体大小会在小幅度内变动的情况，让它好看一点
     function getBlurFontSize(str) {
-        return ~~((~~(str.match(/[0-9]?[0-9]?[0-9]/)) + 3.5) / 5) * 5 - 1; //正则表达式需要注意存在小数情况
+        return ~~((~~(str.match(/(?<!.)[0-9][0-9]?[0-9]?[0-9]?/)) + 3.5) / 5) * 5 - 1; //正则表达式需要注意存在小数情况
     }
 
 
@@ -1029,11 +1331,11 @@
 
     //初始化
     for (const { prototype } of getCompatibleCanvas()) {
-        if (prototype.rewriteStrokeText == undefined) {
+        if (prototype.fyu8d71gf6kv == undefined) {
             if (openCustomReloadAnimation) { prototype.rewriteArc = prototype.arc }
-            prototype.rewriteStrokeText = prototype.strokeText;
-            prototype.rewriteFillText = prototype.fillText;
-            prototype.rewriteMeasureText = prototype.measureText;
+            prototype.fyu8d71gf6kv = prototype.strokeText;
+            prototype.fyu8d71gf6kf = prototype.fillText;
+            prototype.fyu8d71gf6kt = prototype.measureText;
         }
         else { break }
     }
@@ -1079,19 +1381,19 @@
             this.font = getApplicableFontStr(newFontSize);
             //alertTargetStr(text, "Flower Health");
             //consoleTextInfoLog(text, x, y);
-            return this.rewriteStrokeText(getTranslate(text), x, y);
+            return this.fyu8d71gf6kv(getTranslate(text), x, y);
         }
 
         //重写字符填充函数 | 它会随着 strokeText 自适应填充，不需要更多设置
         prototype.fillText = function (text, x, y) {
-            return this.rewriteFillText(getTranslate(text), x, y);
+            return this.fyu8d71gf6kf(getTranslate(text), x, y);
         }
 
         //重写字符尺寸度量函数
         prototype.measureText = function (text) {
             const newFontSize = getBlurFontSize(this.font);
             this.font = getApplicableFontStr(newFontSize);
-            return this.rewriteMeasureText(getTranslate(text));
+            return this.fyu8d71gf6kt(getTranslate(text));
         }
     }
 })();
