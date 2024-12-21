@@ -849,7 +849,7 @@
 
 
 
-        //技能详细描述
+        //天赋详细描述
 
         'Increases extra vision range by 25%': '增加 25% 的额外视野',
 
@@ -948,7 +948,7 @@
 
         'Prevents death for 0.3s upon taking fatal damage. Has a 60s cooldown.': '受到致命伤害时，在 0.3 秒内防止死亡。有 60 秒的冷却时间。',
 
-        'Increases duration to 1.5s, decrease cooldown to 30s.': '持续时间增加至 1.5 秒，冷却时间减少至 30 秒。',
+        'Increases duration to 1.5s, decreases cooldown to 30s.': '持续时间增加至 1.5 秒，冷却时间减少至 30 秒。',
 
 
 
