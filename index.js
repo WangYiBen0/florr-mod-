@@ -586,7 +586,7 @@
 
         'Leaf': '叶子',
         'Gathers energy from the sun to heal your flower passively.': 'LeaF（不是）光合作用补充血量，冷却期间亦生效。',
-        'Can be eaten by friendly mobs to heal.': '也可以帮助除挖掘者外的友方生物回血（被吃掉）。',
+        'Gathers mana from the environment passively.': 'LeaF（不是）从周围环境中吸取魔力，冷却期间亦生效。',
         'Mob Heal: ': '治疗生物：',
 
 
@@ -620,12 +620,13 @@
         'mana': '魔法值',
         'Mana: ': '魔法值：',
         'Base Max Mana: ': '基础魔法值上限：',
-        'Allows finding magic petals.': '魔法之门的钥匙。允许你找到魔法花瓣。',
+        'Allows finding magic petals.': '魔法之门的钥匙。允许你找到同等级的魔法花瓣。',
 
 
 
         'Missile': '导弹',
         'You can actually shoot this one.': '你可以把这个花瓣发射出去。',
+        'You can actually shoot this one... with magic.': '你可以把这个花瓣发射出去……用魔法。',
 
 
 
