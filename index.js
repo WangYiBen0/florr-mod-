@@ -709,7 +709,7 @@
 
         'Root': '根',
         'Provides additional armor but only while in the defensive position.': '提供额外的护甲但只在防御状态生效。',
-        'flower Armor: ': '花朵护甲防御值：',
+        'Flower Armor: ': '花朵护甲防御值：',
 
 
 
