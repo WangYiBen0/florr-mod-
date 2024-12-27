@@ -53,8 +53,8 @@
 
         'Achievements': '成就',
         'Done': '已完成',
-        'Guild': '工会',
-        'You don\'t have a guild yet': '你现在还没有工会',
+        'Guild': '公会',
+        'You don\'t have a guild yet': '你现在还没有公会',
         'Connection lost, reconnecting...': '连接丢失，正在重连……',
 
 
@@ -208,9 +208,19 @@
         'Abandon game': '退出游戏',
         'You were destroyed by:': '您被这个生物打败了',
         'A mysterious entity': '未知生物',
+        'Collected this run': '此次收集到',
         'Continue': '继续',
         'GAME OVER': '游戏结束',
         'Close': '关闭',
+
+
+
+
+        //用户界面-公会
+        'Members': '成员',
+        'Chat': '聊天',
+        'Leave': '退出',
+        'Leader': '会长',
 
 
 
@@ -223,6 +233,10 @@
         'Left squad.': '退出小队。',
         ' has joined the squad.': '加入了小队。',
         ' has left the squad.': '退出了小队。',
+        ' left the guild.': '离开了公会。',
+        ' has joined the guild.': '加入了公会。',
+        'Welcome to the guild.': '欢迎加入公会。',
+        'You were revived by ': '您复活了，快谢谢 ',
 
 
 
@@ -427,6 +441,8 @@
         'Cactus': '仙人掌',
         'Not very strong, but somehow increases your maximum health.': '花瓣本身强度不是很高，但可以增加本体血量上限。',
         'Flower Health: ': '本体血量：',
+        'Increases maximum mana capacity.': '增加魔法值上限。',
+        'Max Mana: ': '魔法值上限：',
 
 
 
@@ -1300,10 +1316,10 @@
                 return `货架将在 ${timeNum} ${getTranslate(timeUnit)}后刷新`;
             }
 
-            //The Super Termite Overmind was defeated by you!
+            //A Super Termite Overmind was defeated by you!
             case (/An? \w\w\w\w\w?\w?\w?\w?\w? .+ was defeated by .+!/.test(text)): {
-                const mobLevel = text.match(/(?<=The\s)\w\w\w\w\w?\w?\w?\w?\w?(?=\s)/);
-                const mobName = text.match(/(?<=The\s\w\w\w\w\w?\w?\w?\w?\w?\s).+(?=\swas)/);
+                const mobLevel = text.match(/(?<=An?\s)\w\w\w\w\w?\w?\w?\w?\w?(?=\s)/);
+                const mobName = text.match(/(?<=An?\s\w\w\w\w\w?\w?\w?\w?\w?\s).+(?=\swas)/);
                 const playerName = text.match(/(?<=was defeated by ).+(?=!)/);
                 return `${getTranslate(mobLevel)} ${getTranslate(mobName)} 已被 ${playerName} 击败！`;
             }
@@ -1338,6 +1354,24 @@
             case (/.+ has left the squad\./.test(text)): {
                 const playerName = text.match(/.+(?= has left the squad\.)/);
                 return `${playerName} 退出了小队。`;
+            }
+
+            //WingDinGaster has joined the guild.
+            case (/.+ has joined the guild\./.test(text)): {
+                const playerName = text.match(/.+(?= has joined the guild\.)/);
+                return `${playerName} 加入了公会。`;
+            }
+
+            //WingDinGaster has left the guild.
+            case (/.+ has left the guild\./.test(text)): {
+                const playerName = text.match(/.+(?= has left the guild\.)/);
+                return `${playerName} 退出了公会。`;
+            }
+            
+            //You were revived by YGG.
+            case (/You were revived by .+\./.test(text)): {
+                const playerName = text.match(/(?=You were revived by ).+(?=\.)/);
+                return `你被 ${playerName} 复活了。快说谢谢！`;
             }
         }
         return text;
