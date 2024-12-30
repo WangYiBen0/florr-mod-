@@ -2,8 +2,8 @@
 // @name            Florr.io 汉化
 // @namespace       A florr.io userjs
 // @description     全面汉化 Florr.io
-// @version         1.1.2
-// @author          -lexiyvv, flo修仙传, Tinhone, squid233, Lucker
+// @version         1.1.2.1-dev.1
+// @author          -lexiyvv, flo修仙传, Tinhone, squid233, Lucker, WingDinGaster
 // @license         GPL-3.0
 // @match           *://florr.io/*
 // @grant           GM_setValue
@@ -51,39 +51,215 @@
         'WingDinGaster': 'Gaster博士',
 
 
-        'Achievements': '成就',
-        'Done': '已完成',
-        'Guild': '公会',
-        'You don\'t have a guild yet': '你现在还没有公会',
         'Connection lost, reconnecting...': '连接丢失，正在重连……',
 
 
         //用户界面-开始
         'Ready': '启动！',
-        'Connecting...': '正在连接...',
-        'Logging in...': '正在登录...',
-        'Loading...': '加载中...',
+        'Connecting...': '正在连接……',
+        'Logging in...': '正在登录……',
+        'Loading...': '加载中……',
         'Account': '账号',
-        'Changelog': '更新日志',
         'Join our Discord community!': '加入我们的Discord社区!',
         '加入我们的QQ群!': '加入我们的QQ群!',
 
 
 
 
+        //用户界面-更新日志
+        'Changelog': '更新日志',
+        'Older changelog entries not available': '更早的更新日志不可用',
+        'July 11th 2022': '2022年 7月11日',
+        'The game has been re-released. It\'s nothing like it was before, so': '游戏已经重新发布。它和以前不一样了，所以',
+        'might as well clear this changelog too :)': '可能也会清空这个更新日志 :)',
+
+        'July 12th 2022': '2022年 7月12日',
+        'Mobs can now only drop petals up to 1 rarity level above': '生物现在只能掉落比它们高一级稀有度的花瓣',
+        'themselves': '',
+        'Ant holes can no longer have a rarity higher than Rare': '蚁洞再也不能比 稀有Rare 更高级了',
+        'Added Craft All button, hold SHIFT before clicking the Craft': '添加了 合成全部 按钮，在点击 合成 按钮之前按住 SHIFT',
+        'button': '',
+
+        'July 13th 2022': '2022年 7月13日',
+        'Ant holes can now be of higher rarities again, but only the queen': '蚁洞现在可以比 稀有Rare 更稀有了，但是只有蚁后可以拥有 稀有Rare',
+        'will be above Rare.': '以上稀有度。',
+        'Petals now have a Mythic rarity. It does not drop from mobs, only': '花瓣现在有了一种 神话Mythic 稀有度。它不会从生物掉落，只能通过',
+        'available via crafting.': '合成获得。',
+
+        'July 14th 2022': '2022年 7月14日',
+        'In-game inventory management has been simplified, now it is': '游戏内背包管理已经被简化，现在只能交换每个槽位的主花瓣和副花瓣。',
+        'only possible to swap the primary and secondary petal for each': '',
+        'slot.': '',
+
+        'July 15th 2022': '2022年 7月15日',
+        'Released Desert scenario.': '发布了沙漠场景。',
+
+        'July 16th 2022': '2022年 7月16日',
+        'Next wave will now start once current wave has 4 or fewer mobs': '下一波现在会在当前波次有4个或更少生物存活时开始。',
+        'alive.': '',
+        'Mob aggro range now constantly increases while they\'re alive.': '生物的攻击范围现在会在它们存活时持续增加。',
+        'Rarer mobs now give more experience as intended': '更稀有的生物现在会给予更多的经验，就像预期的一样',
+        'Level experience requirements have been increased to': '等级经验需求已经被提高以补偿',
+         'compensate': '',
+
+        'July 18th 2022': '2022年 7月18日',
+        'Released PvP.': '发布了PvP。',
+        'Salt now stacks with itself. Reflected damage is reduced by 75%': '盐现在会叠加。当对抗花朵时反射伤害减少 75%。',
+        'against flowers.': '',
+        'Web movement speed debuff changed from -75% to -50%.': '蛛网移速负面效果由 -75% 改为 -50% 。',
+
+        'July 19th 2022': '2022年 7月19日',
+        'Crafting now uses a pseudo random distribution that increases': '合成现在使用伪随机分布，随着合成次数的增加，成功率',
+        'success rate on each failure until a successful craft.': '会逐渐增加，直到合成成功为止。',
+        'Nominal craft chances on the long run are still the same. It will': '长期来看合成成功率还是一样的。不会显示每次尝试的合成成功率。',
+        'not show the calculated craft chance for each attempt.': '',
+        'For example, a 75% craft chance means that 66.6% of the time': '例如，75% 的合成成功率意味着 66.6% 的次数会合成成功。',
+        'it\'ll succeed on the first attempt, and 100% of the time on the': '以及 100% 的次数会在第二次尝试时合成成功。',
+        'second attempt.': '',
+
+        'July 20th 2022': '2022年 7月20日',
+        'Increased base poison damage rate to 15/s (from 9/s).': '基础中毒伤害率提高到了 15/s (从 9/s)。',
+        'Increased mythic craft chance to 2%. This might or might not be': '神话Mythic 合成成功率提高到了 2%。这可能是，亦可能不是临时的。',
+        'temporary.': '',
+        'Magnet no longer stacks with itself.': '磁铁不再叠加。',
+
+        'July 21st 2022': '2022年 7月21日',
+        'Squads will now start at a higher wave that partially depends on': '小队现在会在一个更高的波次开始，这个波次部分取决于',
+        'the best wave each squad member has beaten.': '每个小队成员击败过的最高波次。',
+        'Balance and stuff.': '平衡和其它东西。',
+
+        'July 22nd 2022': '2022年 7月22日',
+        'Web rarity now affects radius rather than duration.': '蛛网稀有度现在影响的是范围，而不是持续时间。',
+
+        'July 24th 2022': '2022年 7月24日',
+        'Web no longer stacks, slow increased to -75%.': '蛛网不再叠加，减速效果提高回了 -75% 。',
+
+        'July 25th 2022': '2022年 7月25日',
+        'Scientists have now discovered the map is a circle, rather than a': '科学家们现在发现地图是一个圆形，而不是之前认为的方形。',
+        'square, as previously thought.': '',
+        'Adjusted mobs in each wave.': '调整了每个波次的生物数量。',
+        'Added setting to hide lower rarity drops. You can still pick them': '添加了隐藏低稀有度掉落物的设置。你仍然可以捡起它们，只是看不到它们',
+        'up, you just won\'t be able to see them. This is a workaround until': '这是一个暂时性的解决方案，直到我们优化掉落物，使游戏不会变卡为止。',
+        'we optimize them so they won\'t lag the game.': '',
+
+        'July 29th 2022': '2022年 7月29日',
+        'Ocean released. It\'ll replace Desert for a couple of days then': '海洋场景发布了。它会替换掉沙漠几天，然后我们会每天交替使用它们。',
+        'we\'ll alternate between them every day or so.': '',
+
+        'July 30th 2022': '2022年 7月30日',
+        // Todo
+
+        'July 31th 2022': '2022年 7月31日',
+        // Todo
+
+        'August 1st 2022': '2022年 8月1日',
+        // Todo
+
+        'August 2nd 2022': '2022年 8月2日',
+        // Todo
+
+        'August 4th 2022': '2022年 8月4日',
+        // Todo
+
+        'August 5th 2022': '2022年 8月5日',
+        // Todo
+
+        'August 7th 2022': '2022年 8月7日',
+        // Todo
+
+        'August 9th 2022': '2022年 8月9日',
+        // Todo
+
+        'August 10th 2022': '2022年 8月10日',
+        // Todo
+
+        'August 16th 2022': '2022年 8月16日',
+        // Todo
+
+        'August 17th 2022': '2022年 8月17日',
+        // Todo
+
+        'August 18th 2022': '2022年 8月18日',
+        // Todo
+
+        'August 26th 2022': '2022年 8月26日',
+        // Todo
+
+        'August 28th 2022': '2022年 8月28日',
+        // Todo
+
+        'August 29th 2022': '2022年 8月29日',
+        // Todo
+
+        'August 30th 2022': '2022年 8月30日',
+        // Todo
+
+        'August 31st 2022': '2022年 8月31日',
+        // Todo
+
+        'September 1st 2022': '2022年 9月1日',
+        // Todo
+
+        'September 5th 2022': '2022年 9月5日',
+        // Todo
+
+        'September 6th 2022': '2022年 9月6日',
+        // Todo
+
+        'September 12th 2022': '2022年 9月12日',
+        // Todo
+
+        'September 13th 2022': '2022年 9月13日',
+        // Todo
+
+        'October 11th 2022': '2022年 10月11日',
+        // Todo
+
+        'October 20th 2022': '2022年 10月20日',
+        // Todo
+
+        'November 2nd 2022': '2022年 11月2日',
+        // Todo
+
+        'November 3rd 2022': '2022年 11月3日',
+        // Todo
+
+        'November 4th 2022': '2022年 11月4日',
+        // Todo
+
+        'November 6th 2022': '2022年 11月6日',
+        // Todo
+
+        'November 15th 2022': '2022年 11月15日',
+        // Todo
+
+        'November 29th 2022': '2022年 11月29日',
+        // Todo
+
+        'November 30th 2022': '2022年 11月30日',
+        // Todo
+
+        // Todo: 2022 12月10日后的更新日志
+
+
+
         //用户界面-设置
         'Settings': '设置',
-        'Keyboard movement': '使用键盘操作',
-        'Movement helper': '移动辅助箭头',
-        'Show damage numbers': '显示伤害数值',
-        'Hide other petals': '隐藏其他人的花瓣',
-        'Screen shake': '画面抖动',
-        'Auto-join squads': '自动加入小队',
+
         'Realm': '领域（服务器）',
         'Automatic': '自动',
         'Juliett (US)': '朱丽叶（美国）',
         'Romeo (EU)': '罗密欧（欧洲）',
         'Sierra (ASIA)': '塞拉（亚洲）',
+
+        'Keyboard movement': '使用键盘操作',
+        'Movement helper': '移动辅助箭头',
+        'Show damage numbers': '显示伤害数值',
+        'Chat': '聊天',
+        'Auto-join squads': '自动加入小队',
+        'Screen shake': '画面抖动',
+        'Hide other petals': '隐藏其他人的花瓣',
+        'Potato': '土豆',
 
         'Credits': '荣誉墙',
         'Special Thanks': '特别鸣谢',
@@ -113,7 +289,7 @@
         'You can link your account to': '你可以连接你的账号以',
         'keep your progress across devices.': '在不同设备上保持你的进度。',
         'Account ID:': '账号ID：',
-        'Support PIN:': '个人身份识别码（Support PIN）:',
+        'Support PIN: ': '个人身份识别码（Support PIN）：',
         '(click to show)': '（点击以显示）',
         'Save this in case you lose access to your account': '当你失去对你账户的许可时保存它',
         'Do not share your support PIN with anyone': '不要与任何人分享你的support PIN',
@@ -128,9 +304,9 @@
         'collect your first legendary petal, or you can': '您就可以在看广告时获得星星；',
         'You gain stars by completing challenges, or you can': '您可以在完成挑战时获得星星，',
         'buy some by clicking the number on the right.': '也可以点击右边的数字购买一些。',
-        'I have too much money': '我有超级多的钱',
+        'I have too much money': '我有超级多的钱，给我更多星星！',
+        'Cancel': '取消',
         'In case of any issues with your purchase,': '如果您的购买过程出现任何问题，',
-        'please contact support@m28.io': '请联系 support@m28.io',
         'please contact our payment processor:': '请联系我们的支付处理员：',
         'support@xsolla.com or live chat at xsolla.com.': 'support@xsulla.com 或是在 xsolla.com 直播聊天。',
         'Lock': '锁定',
@@ -217,8 +393,9 @@
 
 
         //用户界面-公会
+        'Guild': '公会',
+        'You don\'t have a guild yet': '你现在还没有公会',
         'Members': '成员',
-        'Chat': '聊天',
         'Leave': '退出',
         'Leader': '会长',
 
@@ -227,6 +404,12 @@
 
         //用户界面-消息栏
         'Press [ENTER] or click here to chat': '按 [ENTER] 键或点击这里聊天',
+        '[Local]': '[本地]',
+        '[Guild]': '[公会]',
+        '[Squad]': '[小队]',
+        '[Local] ': '[本地] ',
+        '[Guild] ': '[公会] ',
+        '[Squad] ': '[小队] ',
         'No one is around to hear you.': '抱歉，附近没有玩家能听到您说话',
         'You\'re doing that too much.': '您发消息的速度过于快了',
         'Joined squad.': '加入小队。',
@@ -237,6 +420,7 @@
         ' has joined the guild.': '加入了公会。',
         'Welcome to the guild.': '欢迎加入公会。',
         'You were revived by ': '您复活了，快谢谢 ',
+        'Their level isn\'t compatible with your squad.': '很遗憾，TA的等级不适合你所在的小队。',
 
 
 
@@ -256,10 +440,13 @@
         'Ocean': '海洋',
         'Jungle': '丛林',
         'Hel': '地狱（PvP）',
+        'Sewers': '下水道',
+        'Ant Hell': '蚂蚁地狱',
 
 
         //用户界面-成就
-        'completed': "已完成",
+        'Achievements': '成就',
+        'Done': '已完成',
         'Reward': '奖励',
         'Track': '追踪',
         'Track automatically': '自动追踪',
@@ -270,7 +457,6 @@
         //成就-Unusual
         'All-seeing': '洞察',
         'Equip Antennae.': '装备 触角。',
-        'Ant Hell': '蚂蚁地狱',
         'Find out where all these pesky ants keep coming from.': '找到这些讨厌的蚂蚁从哪里来。',
         'Bad': '糟糕',
         'Die.': '死亡。',
@@ -291,7 +477,6 @@
         'Destroy an Unusual mob in one hit.': '一击击杀一个 罕见Unusual 的生物。',
         'Pain dealer': '痛苦制造者',
         'Deal 10k damage.': '总计造成 10k 伤害。',
-        'Sewers': '下水道',
         'Find out where that pipe goes.': '找到那个管道通向哪里。',
         'Unkillable': '无敌',
         'Destroy 100 Common+ mobs without dying.': '击杀 100 个 常见Common+ 的生物而不死亡。',
@@ -337,15 +522,134 @@
         'Equip a Mana Orb.': '装备 魔法宝珠。',
         'Destroy an Epic mob in one hit.': '一击击杀一个 史诗Epic 的生物。',
         'Pacifist': '和平主义者',
-        'Spend 15 minutes admiring nature without destroying anything.': '15 分钟欣赏大自然而不破坏任何东西。（小心AFK！）',
+        'Spend 15 minutes admiring nature without destroying' :'花 15 分钟欣赏大自然而不破坏任何东西。',
+        'anything.': '（小心AFK！）',
         'Spawn 100 friendly mobs.': '召唤 100 只友好生物。',
         'Trade': '交易',
         'Acquire a Coin through trade.': '通过交易获得一枚硬币。',
         'Destroy 100 Rare+ mobs without dying.': '击杀 1000 个 稀有Rare+ 的生物而不死亡。',
         //成就-Legendary
+        'Die 1000 times.': '死 1000 次。',
+        'Die to 35 different types of mobs.': '在 35 种不同的生物手下死亡。',
+        'Be gone': '消失',
+        'Send a flower to Hel.': '把一朵花送到地狱。',
+        'Challenger': '挑战者',
+        'Complete a challenge.': '完成一个挑战。',
+        'Defeat your first Legendary mob.': '击败第一个 神话Legendary 的生物。',
+        'Craft a Legendary petal.': '合成一个 神话Legendary 的花瓣。',
+        'Evade 100k damage.': '躲避总计 100k 伤害。',
+        'Insert 1000 Chips into Plinko.': '把 1000 个 筹码 塞进弹珠游戏。',
+        'Equip 8 Legendary petals.': '装备 8 个 神话Legendary 花瓣。',
+        'Reach Level 35.': '升到 35 级。',
+        'Destroye an Legendary mob in one hit.': '一击击杀一个 传奇Legendary 的生物。',
+        'Deal 100m damage.': '造成 1 亿伤害。',
+        'Racecar': '赛车',
+        'Visit Garden, Desert, Jungle, Ocean, then get back to': '去花园、沙漠、丛林、海洋玩一趟，并在',
+        'Garden in less than 5 minutes.': '5 分钟内回到花园。',
+        'Destroy the mob that killed you within a second of your death.': '在你死亡后的 1 秒内击杀曾经杀死你的那只生物。',
+        'Rolling in dough': '擀面团',
+        'Acquire 100 drops within a second.': '在 1 秒内获得 100 个掉落物。',
+        'Saved': '被拯救',
+        'Get revived.': '被复活。',
+        'Savior': '救世主',
+        'Revive a flower.': '复活一朵花。',
+        'Serial killer': '连环杀手',
+        'Destroy 500 mobs within 2 seconds of each other.': '间隔 2 秒内连续击杀 500 只生物。',
+        'Shiny!': '闪亮！',
+        'Destroy a shiny Ladybug': '击杀一只闪亮的瓢虫',
+        'Spawn 1000 friendly mobs.': '召唤 1000 只友好生物。',
+        'The all-seeing one': '洞察一切的那位',
+        'Craft a petal using the Oracle.': '使用神谕合成一个花瓣。',
+        'The lucky one': '幸运儿',
+        'Successfully craft 10 petals in a row.': '一次成功合成 10 个花瓣。',
+        'Destroy 100 Epic+ mobs without dying.': '击杀 100 个 史诗Epic+ 的生物而不死亡。',
         //成就-Mythic
+        'Complete 10 challenges.': '完成 10 个挑战。',
+        'Defeat your first Mythic mob.': '击败第一个 神话Mythic 的生物。',
+        'Craft a Mythic petal.': '合成一个 神话Mythic 的花瓣。',
+        'Equip 9 Mythic petals.': '装备 9 个 神话Mythic 花瓣。',
+        'Genocide': '大屠杀',
+        'Destroy 100 mobs within a second.': '在 1 秒内击杀 100 只生物。',
+        'Reach Level 55.': '升到 55 级。',
+        'Destroy 50 of the same type of Legendary+ mob in a row': '连续击杀 50 只同种 神话Legendary+ 的生物而不死亡。',
+        'without dying.': '',
+        'JACKPOT!' : '大赢家！',
+        'Hit the Jackpot in Plinko.': '在弹珠游戏中获得大奖。',
+        'Destroy an Mythic mob in one hit.': '一击击杀一个 神话Mythic 的生物。',
+        'Garden in less than 3 minutes.': '3 分钟内回到花园。',
+        'Sacrifice': '牺牲',
+        'Die within a second of reviving someone.': '在复活某人后的 1 秒内死亡。',
+        'Shiny Hunter': '闪亮猎人',
+        'Destroy 5 shiny Ladybugs within a minute.': '在 1 分钟内击杀 5 只闪亮的瓢虫。',
+        'Sound barrier': '音障',
+        'Move really fast.': '移动速度极快。',
+        'Statue': '雕像',
+        'Spawn then kill a Legendary mob without moving.': '出生后不动地击杀一个 传奇Legendary 的生物。',
+        'Spawn 10000 friendly mobs.': '召唤 10000 只友好生物。',
+        'Acquire a Mythic+ Coin through trade.': '通过交易获得一枚 神话Mythic+ 的硬币。',
+        'Destroy 100 Legendary+ mobs without dying.': '击杀 100 个 传奇Legendary+ 的生物而不死亡。',
+        'Wasteful Crafting': '浪费地合成',
+        'Destroy 1 million petals in crafting attempts.': '在合成尝试中摧毁 1000 万个花瓣。',
+        'Craft a petal that you already have.': '合成一个你已经有过的花瓣。',
         //成就-Ultra
+        'Die to 50 different types of mobs.': '在 50 种不同的生物手下死亡。',
+        'Send 100 flowers to Hel.': '把 100 朵花送到地狱。',
+        'Biologist': '生物学家',
+        'Destroy 49 different types of mobs without dying.': '击杀 49 种不同的生物而不死亡。',
+        'Complete 100 challenges.': '完成 100 个挑战。',
+        'Collector': '收藏家',
+        'Collect 65 different types of petals without dying.': '收集 65 种不同的花瓣而不死亡。',
+        'Defeat your first Ultra mob.': '击败第一个 究极Ultra 的生物。',
+        'Fail to craft an Ultra petal and lose 4 petals.': '合成一个 究极Ultra 的花瓣失败并丢失 4 个花瓣。',
+        'Craft a Ultra petal.': '合成一个 究极Ultra 的花瓣。',
+        'Devil\'s advocate': '魔鬼辩护者',
+        'While in Hel, destroy 10 flowers without dying.': '在地狱中击杀 10 朵花而不死亡。',
+        'Evade 10m damage.': '躲避 10m 的伤害。',
+        'Equip 10 Ultra petals.': '装备 10 个 究极Ultra 花瓣。',
+        'Getting tanned': '晒黑了',
+        'Survive 15 minutes in Hel.': '在地狱中生存 15 分钟。',
+        'Reach Level 75.': '升到 75 级。',
+        'Destroy 50 of the same type of Mythic+ mob in a row': '连续击杀 50 只同种 神话Mythic+ 的生物而不死亡。',
+        'High volume crafter': '高产量合成者',
+        'Craft 200k petals.': '合成 200k 花瓣。',
+        'Destroy 1000 ant holes, fire ant burrows or termite': '击杀 1000 个蚁洞、火蚁巢或白蚁巢而不死亡。',
+        'mounds.': '',
+        'It was destiny': '命中注定',
+        'Craft an Ultra+ petal using the Oracle.': '使用神谕合成一个 究极Ultra+ 的花瓣。',
+        'Garden in less than 2 minutes.': '2 分钟内回到花园。',
+        'Revive 100 flowers.': '复活 100 朵花。',
+        'Move even faster.': '更快地移动',
+        'The unlucky one': '倒霉蛋',
+        'Fail to craft 100 petals in a row.': '一次失败合成 100 个花瓣。',
+        'Destroy 100 Mythic+ mobs without dying.': '击杀 100 个 神话Mythic+ 的生物而不死亡。',
+        'Wrong game': '错误的游戏',
+        'Destroy a Square': '击杀一个 正方形',
         //成就-Super
+        'Destroy 49 different types of Ultra+ mobs without dying.': '击杀 49 种不同的 究极Ultra+ 的生物而不死亡。',
+        'Complete 1000 challenges.': '完成 1000 个挑战。',
+        'Defeat your first Super mob.': '击败第一个 超级Super 的生物。',
+        'Fail to craft a Super petal and lose 4 petals.': '合成一个 超级Super 的花瓣失败并丢失 4 个花瓣。',
+        'Craft a Super petal.': '合成一个 超级Super 的花瓣。',
+        'Equip 10 Super petals.': '装备 10 个 超级Super 花瓣。',
+        'Reach Level 100.': '升到 100 级。',
+        'Destroy 50 of the same type of Ultra+ mob in a row': '连续击杀 50 只同种 究极Ultra+ 的生物而不死亡。',
+        'High roller': '大赌徒',
+        'Insert an Ultra+ Chip in Plinko.': '在 弹珠游戏 中插入一个 究极Ultra+ 的筹码。',
+        'Deal 100b damage.': '造成 100b 的伤害。',
+        'Garden in less than 1 minute.': '1 分钟内回到花园。',
+        'Skill issue': '技术问题（去沙漠右下角康康）',
+        'Find the dead dev flower.': '找到已逝的开发者花朵。',
+        'Spawn then kill an Ultra mob without moving.': '出生，击杀一个 究极Ultra 的生物而不移动。',
+        'Super Hunter': '超级猎人',
+        'Destroy 100 Super mobs.': '击杀 100 个 超级Super 的生物。',
+        'Touch grass': '回归生活',
+        'Don\'t play the game for 24h.': '24 小时内不玩florr。',
+        'Acquire a Super+ Coin through trade.': '通过交易获得一个 超级Super+ 的硬币。',
+        'Destroy 100 Ultra+ mobs without dying.': '击杀 100 个 究极Ultra+ 的生物而不死亡。',
+        'Get kill credit for a Super mob without dealing any damage to it.': '击杀一个 超级Super 的生物而不造成伤害。',
+        //成就-Unique
+        'Touched': '碰见M28',
+        'Touch the developer.': '碰到玩家 M28。',
 
 
 
@@ -411,7 +715,8 @@
 
 
         'Blueberries': '蓝莓',
-        'It goes poof. Now with the extra secret ingredient: lightning.': '呲溜一声就飞出去了。整体打出算1份。现在加入了额外的秘密成分：闪电。',
+        'It goes poof. Now with the extra secret ingredient: lightning.': '呲溜一声就飞出去了。现在加入了额外的秘密成分：闪电。',
+        '(lightning)': '（带 闪电）',
 
 
 
@@ -423,6 +728,7 @@
 
         'Bubble': '泡泡',
         'Physics are for the weak.': '弱者才遵守物理定律。（加速推进，跑图利器）',
+        'Physics are for the magicless.': '麻瓜才遵守物理定律。（加速推进，跑图利器，但要注意你的魔法值消耗）',
 
 
 
@@ -484,6 +790,11 @@
         'Compass': '指南针',
         'This crappy thing might to able to find something...': '这个糟糕的玩意儿可能可以找到一些东西……',
 
+
+
+        'Coral': '珊瑚',
+        'Breaks apart on impact.': '被击中后破碎。',
+        'Each piece has 50% of the stats of the predecessor.': '每个碎片都有前一个花瓣 50% 的数据。',
 
 
         'Corn': '玉米',
@@ -568,7 +879,7 @@
 
 
         'Grapes': '葡萄',
-        'It goes poof. Now with a secret ingredient: poison.': '呲溜一声就飞出去了。造成伤害和毒伤，整个打出按一份算。',
+        'It goes poof. Now with a secret ingredient: poison.': '呲溜一声就飞出去了。造成伤害和毒伤。',
         'Poison: ': '毒伤：',
 
 
@@ -662,7 +973,7 @@
 
 
         'Peas': '豌豆',
-        'It goes poof.': '呲溜一声就飞出去了。整体打出算1份。',
+        'It goes poof.': '呲溜一声就飞出去了。',
 
 
 
@@ -1025,6 +1336,22 @@
 
 
 
+        //用户界面-弹珠
+        'Plinko': '弹珠',
+        'Auto': '自动投入',
+
+
+
+
+
+        //用户界面-锻造
+        'Forge': '锻造',
+
+
+
+
+
+
         //用户界面-生物图鉴
         'Mob Gallery': '生物图鉴',
 
@@ -1148,6 +1475,14 @@
 
         'Gambler': '赌徒',
         'This can happen to YOU.': '这会发生在『你』身上。',
+        'I\'M ALL IN': '我梭哈！',
+        'Double or nothing?': '所有，还是一无所有？',
+        'I LOVE GAMBLING': '我爱赌博！',
+        'Thirty-seventh time\'s the charm.': '第 37 次就成功了。',
+        'Where are the blackjack tables?': '哪有黑杰克桌？',
+        'Where are the slots?': '哪有老虎机？',
+        'Winner winner!': '赢啦！',
+
 
         'Hornet': '黄蜂',
         'These aren\'t quite as nice as the little bees.': '这种生物可没有小蜜蜂那么友好。',
@@ -1212,8 +1547,8 @@
 
         'Shell': '贝壳',
         'Not an advertisement.': '什么？这不是广告，而是自带吸铁石的珠宝批发商。',
-        'Pearl Health': '珍珠血量：',
-        'Pearl Damage': '珍珠伤害：',
+        'Pearl Health: ': '珍珠血量：',
+        'Pearl Damage: ': '珍珠伤害：',
 
 
 
@@ -1309,33 +1644,67 @@
                 return `成功率 ${probability}%`;
             }
 
+            //2 Flowers
+            case (/\S+ Flowers?/.test(text)): {
+                const playerNumber = text.match(/\S+(?= Flowers?)/);
+                return `${playerNumber} 朵花`;
+            }
+
+            //0/130 completed
+            case (/\S+\/\S+ completed/.test(text)): {
+                const done = text.match(/\S+(?=\/\S+ completed)/);
+                const total = text.match(/(?<=\S+\/)\S+(?= completed)/);
+                return `${done}/${total} 已完成`;
+            }
+
+            //Members (1)
+            case (/Members \(\S+\)/.test(text)): {
+                const num = text.match(/(?<=Members \().+(?=\))/);
+                return `成员 (${num})`;
+            }
+
             //Store will change in 10 hours.
             case (/Store will change in [0-9][0-9]?[0-9]? \w\w\w\w\w?\w?\w?\./.test(text)): {
                 const timeNum = text.match(/(?<=Store will change in )[0-9]?[0-9]?[0-9]?(?=\s\w\w\w\w\w?\w?\w?\.)/);
                 const timeUnit = text.match(/(?<=Store will change in [0-9]?[0-9]?[0-9]?\s)\w\w\w\w\w?\w?\w?(?=\.)/);
-                return `货架将在 ${timeNum} ${getTranslate(timeUnit)}后刷新`;
+                return `货架将在 ${timeNum} ${getTranslate(timeUnit)}后刷新。`;
             }
 
-            //A Super Termite Overmind was defeated by you!
-            case (/An? \w\w\w\w\w?\w?\w?\w?\w? .+ was defeated by .+!/.test(text)): {
+            //Challenges will change in 10 hours.
+            case (/Challenges will change in [0-9][0-9]?[0-9]? \w\w\w\w\w?\w?\w?\./.test(text)): {
+                const timeNum = text.match(/(?<=Challenges will change in )[0-9]?[0-9]?[0-9]?(?=\s\w\w\w\w\w?\w?\w?\.)/);
+                const timeUnit = text.match(/(?<=Challenges will change in [0-9]?[0-9]?[0-9]?\s)\w\w\w\w\w?\w?\w?(?=\.)/);
+                return `挑战将在 ${timeNum} ${getTranslate(timeUnit)}后刷新。`;
+            }
+
+            //A Super Termite Overmind has been defeated by you!
+            case (/An? \w\w\w\w\w?\w?\w?\w?\w? .+ has been defeated by .+!/.test(text)): {
                 const mobLevel = text.match(/(?<=An?\s)\w\w\w\w\w?\w?\w?\w?\w?(?=\s)/);
-                const mobName = text.match(/(?<=An?\s\w\w\w\w\w?\w?\w?\w?\w?\s).+(?=\swas)/);
-                const playerName = text.match(/(?<=was defeated by ).+(?=!)/);
-                return `${getTranslate(mobLevel)} ${getTranslate(mobName)} 已被 ${playerName} 击败！`;
+                const mobName = text.match(/(?<=An?\s\w\w\w\w\w?\w?\w?\w?\w?\s).+(?=\shas)/);
+                const playerName = text.match(/(?<=has been defeated by ).+(?=!)/);
+                return `一只 [${getTranslate(mobLevel)} ${getTranslate(mobName)}] 已被 ${playerName} 击败！`;
+            }
+
+            //A Super Termite Overmind has been crafted by you!
+            case (/An? \w\w\w\w\w?\w?\w?\w?\w? .+ has been crafted by .+!/.test(text)): {
+                const petalLevel = text.match(/(?<=An?\s)\w\w\w\w\w?\w?\w?\w?\w?(?=\s)/);
+                const petalName = text.match(/(?<=An?\s\w\w\w\w\w?\w?\w?\w?\w?\s).+(?=\shas)/);
+                const playerName = text.match(/(?<=has been crafted by ).+(?=!)/);
+                return `一个 [${getTranslate(petalLevel)} ${getTranslate(petalName)}] 已被 ${playerName} 合成！`;
             }
 
             //A Super Termite Overmind has spawned!
             case (/An? \w\w\w\w\w .+ has spawned!/.test(text)): {
                 const mobLevel = text.match(/(?<=An?\s)\w\w\w\w\w(?=\s)/);
                 const mobName = text.match(/(?<=An?\s\w\w\w\w\w\s).+(?= has spawned!)/);
-                return `${getTranslate(mobLevel)} ${getTranslate(mobName)} 已在地图中生成！`;
+                return `一只 [${getTranslate(mobLevel)}] ${getTranslate(mobName)} 已在地图中生成！`;
             }
 
             //A Super Termite Overmind has spawned somewhere!
             case (/An? \w\w\w\w\w .+ has spawned somewhere!/.test(text)): {
                 const mobLevel = text.match(/(?<=An?\s)\w\w\w\w\w(?=\s)/);
                 const mobName = text.match(/(?<=An?\s\w\w\w\w\w\s).+(?= has spawned somewhere!)/);
-                return `${getTranslate(mobLevel)} ${getTranslate(mobName)} 已在某个地图中生成！`;
+                return `一只 [${getTranslate(mobLevel)}] ${getTranslate(mobName)} 已在某个地图中生成！`;
             }
 
             //Magic Cotton
@@ -1367,7 +1736,7 @@
                 const playerName = text.match(/.+(?= has left the guild\.)/);
                 return `${playerName} 退出了公会。`;
             }
-            
+
             //You were revived by YGG.
             case (/You were revived by .+\./.test(text)): {
                 const playerName = text.match(/(?=You were revived by ).+(?=\.)/);
