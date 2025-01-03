@@ -85,7 +85,7 @@
         'Changelog': '更新日志',
         'Older changelog entries not available': '更早的更新日志不可用',
 
-        //todo
+        //todo: changelog
 
         'Mobs can now only drop petals up to 1 rarity level above': '生物现在只能掉落比它们高一级稀有度的花瓣',
         'themselves': '',
@@ -1256,6 +1256,10 @@
 
         //用户界面-锻造
         'Forge': '锻造',
+        'Unique petals will last until another player forges the same petal.': '独一无二的合成品将保留至其他玩家锻造出相同合成品为止。',
+        'When that happens, you will receive your Super petals back.': '当这种情况发生时，将返还你的 超级Super 花瓣。',
+        'The cost increases each time that petal is forged.': '每次锻造相同合成品时，消耗增加。',
+        'You do not have any Super petals to attempt this.': '你还没有任何 超级Super 花瓣来尝试锻造。',
 
 
 
@@ -1485,7 +1489,7 @@
 
 
         'Square': '方块',
-        'This shape... it looks familiar...': '这个外形……看着很熟悉……（来自diep.io by M28）（话说你怎么搞到的？0.0001%的生成概率）',
+        'This shape... it looks familiar...': '这个外形……看着很熟悉……（来自diep.io by M28）',
 
 
 
@@ -1497,6 +1501,15 @@
 
         'Termite Overmind': '白蚁领主',
         'The one who oversees all.': '注视着一切的幼白蚁。（bushi',
+
+        'Titan': '泰坦',
+        'As the Shaper wills': '正如塑造者所愿',
+        'I was the hammer at the Founding': '我是创世时的锤子',
+        'Formed of the forge': '由锻造而成',
+        'The Worldsmith wanders': '世界工匠游荡着',
+        'The forge of creation burns hotter': '创世之炉燃烧得更加炽热',
+        'There can be only one': '只能有一个',
+        'What is weak must break': '弱者必被粉碎',
 
         'Trader': '商人',
 
@@ -1515,6 +1528,8 @@
         'Worker Termite': '工白蚁',
 
 
+        'Worm': '蠕虫',
+        'It\'s supposed to eat dirt but this one\'s eating flowers.': '它应该吃泥土，但这条却吃花。',
 
 
 
