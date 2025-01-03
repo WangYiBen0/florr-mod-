@@ -67,48 +67,55 @@
 
 
         //用户界面-更新日志
+
+        'January': '1月',
+        'February': '2月',
+        'March': '3月',
+        'April': '4月',
+        'May': '5月',
+        'June': '6月',
+        'July': '7月',
+        'August': '8月',
+        'September': '9月',
+        'October': '10月',
+        'November': '11月',
+        'December': '12月',
+
+
         'Changelog': '更新日志',
         'Older changelog entries not available': '更早的更新日志不可用',
-        'July 11th 2022': '2022年 7月11日',
-        'The game has been re-released. It\'s nothing like it was before, so': '游戏已经重新发布。它和以前不一样了，所以',
-        'might as well clear this changelog too :)': '可能也会清空这个更新日志 :)',
 
-        'July 12th 2022': '2022年 7月12日',
+        //todo
+
         'Mobs can now only drop petals up to 1 rarity level above': '生物现在只能掉落比它们高一级稀有度的花瓣',
         'themselves': '',
         'Ant holes can no longer have a rarity higher than Rare': '蚁洞再也不能比 稀有Rare 更高级了',
         'Added Craft All button, hold SHIFT before clicking the Craft': '添加了 合成全部 按钮，在点击 合成 按钮之前按住 SHIFT',
         'button': '',
 
-        'July 13th 2022': '2022年 7月13日',
         'Ant holes can now be of higher rarities again, but only the queen': '蚁洞现在可以比 稀有Rare 更稀有了，但是只有蚁后可以拥有 稀有Rare',
         'will be above Rare.': '以上稀有度。',
         'Petals now have a Mythic rarity. It does not drop from mobs, only': '花瓣现在有了一种 神话Mythic 稀有度。它不会从生物掉落，只能通过',
         'available via crafting.': '合成获得。',
 
-        'July 14th 2022': '2022年 7月14日',
         'In-game inventory management has been simplified, now it is': '游戏内背包管理已经被简化，现在只能交换每个槽位的主花瓣和副花瓣。',
         'only possible to swap the primary and secondary petal for each': '',
         'slot.': '',
 
-        'July 15th 2022': '2022年 7月15日',
         'Released Desert scenario.': '发布了沙漠场景。',
 
-        'July 16th 2022': '2022年 7月16日',
         'Next wave will now start once current wave has 4 or fewer mobs': '下一波现在会在当前波次有4个或更少生物存活时开始。',
         'alive.': '',
         'Mob aggro range now constantly increases while they\'re alive.': '生物的攻击范围现在会在它们存活时持续增加。',
         'Rarer mobs now give more experience as intended': '更稀有的生物现在会给予更多的经验，就像预期的一样',
         'Level experience requirements have been increased to': '等级经验需求已经被提高以补偿',
-         'compensate': '',
+        'compensate': '',
 
-        'July 18th 2022': '2022年 7月18日',
         'Released PvP.': '发布了PvP。',
         'Salt now stacks with itself. Reflected damage is reduced by 75%': '盐现在会叠加。当对抗花朵时反射伤害减少 75%。',
         'against flowers.': '',
         'Web movement speed debuff changed from -75% to -50%.': '蛛网移速负面效果由 -75% 改为 -50% 。',
 
-        'July 19th 2022': '2022年 7月19日',
         'Crafting now uses a pseudo random distribution that increases': '合成现在使用伪随机分布，随着合成次数的增加，成功率',
         'success rate on each failure until a successful craft.': '会逐渐增加，直到合成成功为止。',
         'Nominal craft chances on the long run are still the same. It will': '长期来看合成成功率还是一样的。不会显示每次尝试的合成成功率。',
@@ -117,24 +124,22 @@
         'it\'ll succeed on the first attempt, and 100% of the time on the': '以及 100% 的次数会在第二次尝试时合成成功。',
         'second attempt.': '',
 
-        'July 20th 2022': '2022年 7月20日',
         'Increased base poison damage rate to 15/s (from 9/s).': '基础中毒伤害率提高到了 15/s (从 9/s)。',
         'Increased mythic craft chance to 2%. This might or might not be': '神话Mythic 合成成功率提高到了 2%。这可能是，亦可能不是临时的。',
         'temporary.': '',
         'Magnet no longer stacks with itself.': '磁铁不再叠加。',
 
-        'July 21st 2022': '2022年 7月21日',
         'Squads will now start at a higher wave that partially depends on': '小队现在会在一个更高的波次开始，这个波次部分取决于',
         'the best wave each squad member has beaten.': '每个小队成员击败过的最高波次。',
         'Balance and stuff.': '平衡和其它东西。',
 
-        'July 22nd 2022': '2022年 7月22日',
         'Web rarity now affects radius rather than duration.': '蛛网稀有度现在影响的是范围，而不是持续时间。',
 
-        'July 24th 2022': '2022年 7月24日',
         'Web no longer stacks, slow increased to -75%.': '蛛网不再叠加，减速效果提高回了 -75% 。',
 
-        'July 25th 2022': '2022年 7月25日',
+        'Ocean released. It\'ll replace Desert for a couple of days then': '海洋场景发布了。它会替换掉沙漠几天，然后我们会每天交替使用它们。',
+        'we\'ll alternate between them every day or so.': '',
+
         'Scientists have now discovered the map is a circle, rather than a': '科学家们现在发现地图是一个圆形，而不是之前认为的方形。',
         'square, as previously thought.': '',
         'Adjusted mobs in each wave.': '调整了每个波次的生物数量。',
@@ -142,104 +147,8 @@
         'up, you just won\'t be able to see them. This is a workaround until': '这是一个暂时性的解决方案，直到我们优化掉落物，使游戏不会变卡为止。',
         'we optimize them so they won\'t lag the game.': '',
 
-        'July 29th 2022': '2022年 7月29日',
-        'Ocean released. It\'ll replace Desert for a couple of days then': '海洋场景发布了。它会替换掉沙漠几天，然后我们会每天交替使用它们。',
-        'we\'ll alternate between them every day or so.': '',
-
-        'July 30th 2022': '2022年 7月30日',
-        // Todo
-
-        'July 31th 2022': '2022年 7月31日',
-        // Todo
-
-        'August 1st 2022': '2022年 8月1日',
-        // Todo
-
-        'August 2nd 2022': '2022年 8月2日',
-        // Todo
-
-        'August 4th 2022': '2022年 8月4日',
-        // Todo
-
-        'August 5th 2022': '2022年 8月5日',
-        // Todo
-
-        'August 7th 2022': '2022年 8月7日',
-        // Todo
-
-        'August 9th 2022': '2022年 8月9日',
-        // Todo
-
-        'August 10th 2022': '2022年 8月10日',
-        // Todo
-
-        'August 16th 2022': '2022年 8月16日',
-        // Todo
-
-        'August 17th 2022': '2022年 8月17日',
-        // Todo
-
-        'August 18th 2022': '2022年 8月18日',
-        // Todo
-
-        'August 26th 2022': '2022年 8月26日',
-        // Todo
-
-        'August 28th 2022': '2022年 8月28日',
-        // Todo
-
-        'August 29th 2022': '2022年 8月29日',
-        // Todo
-
-        'August 30th 2022': '2022年 8月30日',
-        // Todo
-
-        'August 31st 2022': '2022年 8月31日',
-        // Todo
-
-        'September 1st 2022': '2022年 9月1日',
-        // Todo
-
-        'September 5th 2022': '2022年 9月5日',
-        // Todo
-
-        'September 6th 2022': '2022年 9月6日',
-        // Todo
-
-        'September 12th 2022': '2022年 9月12日',
-        // Todo
-
-        'September 13th 2022': '2022年 9月13日',
-        // Todo
-
-        'October 11th 2022': '2022年 10月11日',
-        // Todo
-
-        'October 20th 2022': '2022年 10月20日',
-        // Todo
-
-        'November 2nd 2022': '2022年 11月2日',
-        // Todo
-
-        'November 3rd 2022': '2022年 11月3日',
-        // Todo
-
-        'November 4th 2022': '2022年 11月4日',
-        // Todo
-
-        'November 6th 2022': '2022年 11月6日',
-        // Todo
-
-        'November 15th 2022': '2022年 11月15日',
-        // Todo
-
-        'November 29th 2022': '2022年 11月29日',
-        // Todo
-
-        'November 30th 2022': '2022年 11月30日',
-        // Todo
-
-        // Todo: 2022 12月10日后的更新日志
+        'The game has been re-released. It\'s nothing like it was before, so': '游戏已经重新发布。它和以前不一样了，所以',
+        'might as well clear this changelog too :)': '可能也会清空这个更新日志 :)',
 
 
 
@@ -259,7 +168,8 @@
         'Auto-join squads': '自动加入小队',
         'Screen shake': '画面抖动',
         'Hide other petals': '隐藏其他人的花瓣',
-        'Potato': '土豆',
+        'Potato computer': '我的电脑是土豆！',
+        'Equip drops': '自动装备掉落物',
 
         'Credits': '荣誉墙',
         'Special Thanks': '特别鸣谢',
@@ -522,7 +432,7 @@
         'Equip a Mana Orb.': '装备 魔法宝珠。',
         'Destroy an Epic mob in one hit.': '一击击杀一个 史诗Epic 的生物。',
         'Pacifist': '和平主义者',
-        'Spend 15 minutes admiring nature without destroying' :'花 15 分钟欣赏大自然而不破坏任何东西。',
+        'Spend 15 minutes admiring nature without destroying': '花 15 分钟欣赏大自然而不破坏任何东西。',
         'anything.': '（小心AFK！）',
         'Spawn 100 friendly mobs.': '召唤 100 只友好生物。',
         'Trade': '交易',
@@ -573,7 +483,7 @@
         'Reach Level 55.': '升到 55 级。',
         'Destroy 50 of the same type of Legendary+ mob in a row': '连续击杀 50 只同种 神话Legendary+ 的生物而不死亡。',
         'without dying.': '',
-        'JACKPOT!' : '大赢家！',
+        'JACKPOT!': '大赢家！',
         'Hit the Jackpot in Plinko.': '在弹珠游戏中获得大奖。',
         'Destroy an Mythic mob in one hit.': '一击击杀一个 神话Mythic 的生物。',
         'Garden in less than 3 minutes.': '3 分钟内回到花园。',
@@ -1741,6 +1651,14 @@
             case (/You were revived by .+\./.test(text)): {
                 const playerName = text.match(/(?=You were revived by ).+(?=\.)/);
                 return `你被 ${playerName} 复活了。快说谢谢！`;
+            }
+
+            //December 25th 2024
+            case (/[A-Z][a-z]+\s\d\d?s?t?h?n?d? \d\d\d\d/.test(text)): {
+                const month = text.match(/(?<=^)[A-Z][a-z]+(?= \d\d?s?t?h?n?d? \d\d\d\d)/);
+                const day = text.match(/(?<=\s)\d\d?(?=s?t?h?n?d? \d\d\d\d)/);
+                const year = text.match(/(?<=\s)\d\d\d\d/);
+                return `${year}年${getTranslate(month)}${day}日`;
             }
         }
         return text;
