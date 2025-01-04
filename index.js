@@ -840,6 +840,7 @@
 
         'Lotus': '莲花',
         'Absorbs poison damage taken by the flower.': '可以吸收玩家受到的毒伤。',
+        'Poison Resistance: ': '毒伤抗性：',
 
 
 
@@ -1669,9 +1670,9 @@
             }
 
             //December 25th 2024
-            case (/[A-Z][a-z]+\s\d\d?s?t?h?n?d? \d\d\d\d/.test(text)): {
-                const month = text.match(/(?<=^)[A-Z][a-z]+(?= \d\d?s?t?h?n?d? \d\d\d\d)/);
-                const day = text.match(/(?<=\s)\d\d?(?=s?t?h?n?d? \d\d\d\d)/);
+            case (/[A-Z][a-z]+\s\d\d?s?t?h?n?r?d? \d\d\d\d/.test(text)): {
+                const month = text.match(/(?<=^)[A-Z][a-z]+(?= \d\d?s?t?h?n?r?d? \d\d\d\d)/);
+                const day = text.match(/(?<=\s)\d\d?(?=s?t?h?n?r?d? \d\d\d\d)/);
                 const year = text.match(/(?<=\s)\d\d\d\d/);
                 return `${year}年${getTranslate(month)}${day}日`;
             }
