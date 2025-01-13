@@ -2,7 +2,7 @@
 // @name            Florr.io 汉化
 // @namespace       A florr.io userjs
 // @description     全面汉化 Florr.io
-// @version         1.1.2.1-dev.1
+// @version         1.1.2.1-dev.2
 // @author          -lexiyvv, flo修仙传, Tinhone, squid233, Lucker, WingDinGaster
 // @license         GPL-3.0
 // @match           *://florr.io/*
@@ -155,6 +155,10 @@
         //用户界面-设置
         'Settings': '设置',
 
+        'Quality': '画质',
+        'Low': '低',
+        'Medium': '中',
+        'High': '高',
         'Realm': '领域（服务器）',
         'Automatic': '自动',
         'Juliett (US)': '朱丽叶（美国）',
@@ -170,6 +174,7 @@
         'Hide other petals': '隐藏其他人的花瓣',
         'Potato computer': '我的电脑是土豆！',
         'Equip drops': '自动装备掉落物',
+        'Live icons': '动态图标',
 
         'Credits': '荣誉墙',
         'Special Thanks': '特别鸣谢',
@@ -209,6 +214,9 @@
         //用户界面-商店
         'Shop': '商店',
         'Today\'s offers:': '今日售卖',
+        'Confirm': '确认',
+        'Are you sure you want to buy this?': '你确定要购买这个吗？',
+        'Petal purchases are not refundable': '花瓣购买不可退款',
         'You gain stars as you watch ads, or you can': '您可以在看广告时获得星星，',
         'You gain stars as you watch ads as soon as you': '只要您获得第一个传奇花瓣，',
         'collect your first legendary petal, or you can': '您就可以在看广告时获得星星；',
@@ -220,9 +228,12 @@
         'please contact our payment processor:': '请联系我们的支付处理员：',
         'support@xsolla.com or live chat at xsolla.com.': 'support@xsulla.com 或是在 xsolla.com 直播聊天。',
         'Lock': '锁定',
+        'Store will not change while locked.': '锁定后商店不会改变。',
+        'Store will change once unlocked.': '一解锁商店就会刷新。',
         'Daily Challenge': '每日挑战',
         'Challenge': '挑战',
         'Defeat these enemies:': '击败这些敌人：',
+        'Claimed': '已领取',
         'Challenge available': '该挑战只对',
         'for supporters only.': '支持者有效。',
         'Challenges will change in ': '每日挑战重置剩余时间：',
@@ -305,9 +316,9 @@
         //用户界面-公会
         'Guild': '公会',
         'You don\'t have a guild yet': '你现在还没有公会',
-        'Members': '成员',
         'Leave': '退出',
-        'Leader': '会长',
+        '(Leader)': '（会长）',
+        'Squad': '小队',
 
 
 
@@ -329,8 +340,10 @@
         ' left the guild.': '离开了公会。',
         ' has joined the guild.': '加入了公会。',
         'Welcome to the guild.': '欢迎加入公会。',
-        'You were revived by ': '您复活了，快谢谢 ',
         'Their level isn\'t compatible with your squad.': '很遗憾，TA的等级不适合你所在的小队。',
+        'Your level isn\'t compatible to join their squad.': '很遗憾，你的等级不适合TA们的小队。',
+        'Invalid number of arguments': '参数数量不对',
+        'Invalid command, type /help to list all commands.': '无效指令，输入 /help 查看所有指令。',
 
 
 
@@ -356,6 +369,7 @@
 
         //用户界面-成就
         'Achievements': '成就',
+        'Achievement unlocked': '成就已解锁',
         'Done': '已完成',
         'Reward': '奖励',
         'Track': '追踪',
@@ -403,7 +417,7 @@
         'Reach Level 10.': '升到 10 级。',
         'Homewrecker': '拆家者',
         'Destroy an ant hole, fire ant burrow or termite mound.': '摧毁一个蚁洞、火蚁巢穴或白蚁丘。',
-        'Destroy an Rare mob in one hit.': '一击击杀一个 稀有Rare 的生物。',
+        'Destroy a Rare mob in one hit.': '一击击杀一个 稀有Rare 的生物。',
         'Paper': '脆的像纸一样',
         'Die to a damage instance higher than your max hp.': '死于超过你最大生命值的伤害。',
         'Return to sender': '寄回去',
@@ -451,7 +465,7 @@
         'Insert 1000 Chips into Plinko.': '把 1000 个 筹码 塞进弹珠游戏。',
         'Equip 8 Legendary petals.': '装备 8 个 神话Legendary 花瓣。',
         'Reach Level 35.': '升到 35 级。',
-        'Destroye an Legendary mob in one hit.': '一击击杀一个 传奇Legendary 的生物。',
+        'Destroye a Legendary mob in one hit.': '一击击杀一个 传奇Legendary 的生物。',
         'Deal 100m damage.': '造成 1 亿伤害。',
         'Racecar': '赛车',
         'Visit Garden, Desert, Jungle, Ocean, then get back to': '去花园、沙漠、丛林、海洋玩一趟，并在',
@@ -485,7 +499,7 @@
         'without dying.': '',
         'JACKPOT!': '大赢家！',
         'Hit the Jackpot in Plinko.': '在弹珠游戏中获得大奖。',
-        'Destroy an Mythic mob in one hit.': '一击击杀一个 神话Mythic 的生物。',
+        'Destroy a Mythic mob in one hit.': '一击击杀一个 神话Mythic 的生物。',
         'Garden in less than 3 minutes.': '3 分钟内回到花园。',
         'Sacrifice': '牺牲',
         'Die within a second of reviving someone.': '在复活某人后的 1 秒内死亡。',
@@ -522,8 +536,7 @@
         'Destroy 50 of the same type of Mythic+ mob in a row': '连续击杀 50 只同种 神话Mythic+ 的生物而不死亡。',
         'High volume crafter': '高产量合成者',
         'Craft 200k petals.': '合成 200k 花瓣。',
-        'Destroy 1000 ant holes, fire ant burrows or termite': '击杀 1000 个蚁洞、火蚁巢或白蚁巢而不死亡。',
-        'mounds.': '',
+        'Destroy 1000 ant holes, fire ant burrows or termite mounds.': '击杀 1000 个蚁洞、火蚁巢或白蚁巢而不死亡。',
         'It was destiny': '命中注定',
         'Craft an Ultra+ petal using the Oracle.': '使用神谕合成一个 究极Ultra+ 的花瓣。',
         'Garden in less than 2 minutes.': '2 分钟内回到花园。',
@@ -535,7 +548,8 @@
         'Wrong game': '错误的游戏',
         'Destroy a Square': '击杀一个 正方形',
         //成就-Super
-        'Destroy 49 different types of Ultra+ mobs without dying.': '击杀 49 种不同的 究极Ultra+ 的生物而不死亡。',
+        'Destroy 49 different types of Ultra+ mobs without': '击杀 49 种不同的 究极Ultra+ 的生物而不死亡。',
+        'dying.': '',
         'Complete 1000 challenges.': '完成 1000 个挑战。',
         'Defeat your first Super mob.': '击败第一个 超级Super 的生物。',
         'Fail to craft a Super petal and lose 4 petals.': '合成一个 超级Super 的花瓣失败并丢失 4 个花瓣。',
@@ -556,7 +570,8 @@
         'Don\'t play the game for 24h.': '24 小时内不玩florr。',
         'Acquire a Super+ Coin through trade.': '通过交易获得一个 超级Super+ 的硬币。',
         'Destroy 100 Ultra+ mobs without dying.': '击杀 100 个 究极Ultra+ 的生物而不死亡。',
-        'Get kill credit for a Super mob without dealing any damage to it.': '击杀一个 超级Super 的生物而不造成伤害。',
+        'Get kill credit for a Super mob without dealing any': '击杀一个 超级Super 的生物而不造成伤害。',
+        'damage to it.': '',
         //成就-Unique
         'Touched': '碰见M28',
         'Touch the developer.': '碰到玩家 M28。',
@@ -626,7 +641,7 @@
 
         'Blueberries': '蓝莓',
         'It goes poof. Now with the extra secret ingredient: lightning.': '呲溜一声就飞出去了。现在加入了额外的秘密成分：闪电。',
-        '(lightning)': '（带 闪电）',
+        ' (lightning)': '（带 闪电）',
 
 
 
@@ -638,7 +653,7 @@
 
         'Bubble': '泡泡',
         'Physics are for the weak.': '弱者才遵守物理定律。（加速推进，跑图利器）',
-        'Physics are for the magicless.': '麻瓜才遵守物理定律。（加速推进，跑图利器，但要注意你的魔法值消耗）',
+        'Physics are for the magicless.': '麻瓜才遵守物理定律。（加速推进，跑图利器）',
 
 
 
@@ -698,7 +713,7 @@
 
 
         'Compass': '指南针',
-        'This crappy thing might to able to find something...': '这个糟糕的玩意儿可能可以找到一些东西……',
+        'This crappy thing might be able to find something interesting...': '这个破烂玩意儿可能可以找到一些有趣的东西……',
 
 
 
@@ -873,6 +888,12 @@
 
 
 
+        'Nazar': '蓝眼睛',
+        'Nazar Amulet': '蓝眼护身符',
+        'Reduces one damage instance damage by 98%.': '减少一次伤害的 98%。',
+
+
+
         'Orange': '橘子',
         'A sweet citrus fruit.': '站在此地，不要走动。',
 
@@ -1013,7 +1034,12 @@
         'Stick': '树枝',
         'Mysterious Stick': '神秘的树枝',
         'A mysterious stick that summons the forces of the wind.': '这个神秘的树枝可以召唤风的力量来生成沙尘暴。',
+        'A mysterious stick that summons the forces of the wind... with magic.': '这个神秘的树枝可以召唤风的力量来生成沙尘暴……用魔法。',
         'Spawn: ': '生成：',
+        'Spawn cost: ': '生成消耗：',
+        ' mana': ' 魔法值',
+        'Maintenance cost: ': '维护消耗：',
+        ' mana/s': ' 魔法值/秒',
 
 
 
@@ -1059,8 +1085,8 @@
 
 
 
-        'Yggdrasil': 'Yggdrasil！世界树',
-        'A dried leaf from the Yggdrasil tree.': '从世界树上掉落的枯叶。',
+        'Yggdrasil': '世界树',
+        'A dried leaf from the Yggdrasil tree.': 'Yggdrasil！从世界树上掉落的枯叶。',
         'Rumored to be able to bring the fallen back to life.': '据说能够让死亡的花朵复活。',
         'Revive Heal: ': '复活后血量：',
 
@@ -1089,7 +1115,7 @@
 
         //天赋详细描述
 
-        'Increases extra vision range by 25%': '增加 25% 的额外视野',
+        'Increases vision range by 25%.': '增加 25% 的视野。',
 
         'Increases extra vision range from 25% to 50%.': '增加额外视野，从 25% 到 50%。',
 
@@ -1098,7 +1124,7 @@
 
 
 
-        'Reach': '手长（666这个入开瑞驰）',
+        'Reach': '手长',
 
         'Attack range': '攻击范围',
 
@@ -1201,7 +1227,7 @@
 
         'Summoner': '召唤师',
 
-        ' of summoned mobs by 10%.': '：+10%，基于召唤物基础血量',
+        ' of summoned mobs by 7%.': '：+7%，基于召唤物基础血量',
 
 
 
@@ -1320,6 +1346,7 @@
         'Beetle': '甲虫',
         'It\'s hungry and flowers are its favorite meal.': '这种饿货最喜欢吃花花。',
         'Scourge that spawns in the other plane.': '在异域生成的祸害。',
+        'This one has a different pattern... what does that mean?': '这货的图案跟其他的不一样……这代表什么？',
 
         'Bubble': '泡泡',
         'Pop': '吹弹可破。',
@@ -1513,6 +1540,9 @@
         'What is weak must break': '弱者必被粉碎',
 
         'Trader': '商人',
+        'I have the coin, if you have wares': '我有金币，如果你有货物的话。',
+        'I\'m looking to expand my collection...': '我正在扩大我的收藏……',
+        'May I interest you in a little trade?': '我是否可以向你推销一些东西？',
 
         'Wasp': '胡蜂',
         'They are ANGRY.': '它们非常生气。',
@@ -1663,10 +1693,16 @@
                 return `${playerName} 退出了公会。`;
             }
 
-            //You were revived by YGG.
-            case (/You were revived by .+\./.test(text)): {
-                const playerName = text.match(/(?=You were revived by ).+(?=\.)/);
+            //You were revived by YGG
+            case (/You were revived by .+/.test(text)): {
+                const playerName = text.match(/(?<=You were revived by ).+/);
                 return `你被 ${playerName} 复活了。快说谢谢！`;
+            }
+
+            //You were marked by MARK
+            case (/You were marked by .+/.test(text)): {
+                const playerName = text.match(/(?<=You were marked by ).+/);
+                return `你被 ${playerName} 标记了。下地狱吧！`;
             }
 
             //December 25th 2024
@@ -1675,6 +1711,12 @@
                 const day = text.match(/(?<=\s)\d\d?(?=s?t?h?n?r?d? \d\d\d\d)/);
                 const year = text.match(/(?<=\s)\d\d\d\d/);
                 return `${year}年${getTranslate(month)}${day}日`;
+            }
+
+            //This server is scheduled to close in 5 minutes.
+            case (/This server is scheduled to close in \d+ minutes?\./.test(text)): {
+                const minutes = text.match(/\d+/);
+                return `本服务器将在 ${minutes} 分钟后关闭。`;
             }
         }
         return text;
